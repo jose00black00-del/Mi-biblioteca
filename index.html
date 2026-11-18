@@ -566,10 +566,82 @@
       .paso { grid-template-columns: 1fr; gap: 4px; }
     }
 
+
+    /* ═════ ENCABEZADO COMPACTO, PESTAÑAS PLANAS, TIPOGRAFÍA ═════ */
+    #cabecera { transition: transform .25s ease; }
+    .progreso { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: transparent; z-index: 40; }
+    .progreso span { background: var(--verde); }
+    .nav { height: 60px; gap: 12px; }
+    .acciones-cab { display: flex; align-items: center; gap: 8px; margin-left: auto; min-width: 0; }
+    .btn-secciones { display: none; align-items: center; gap: 8px; min-height: 40px; max-width: 58vw; padding: 0 12px; border: 1px solid var(--line); border-radius: 4px; background: #fff; color: var(--ink); font: inherit; font-size: .875rem; font-weight: 600; cursor: pointer; }
+    .btn-secciones span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .btn-secciones .i { width: 14px; height: 14px; stroke-width: 2.5; transition: transform .2s; }
+    .btn-secciones[aria-expanded="true"] .i { transform: rotate(180deg); }
+    .lectura { position: relative; flex: none; }
+    .btn-aa { min-width: 40px; min-height: 40px; padding: 0 8px; border: 1px solid var(--line); border-radius: 4px; background: #fff; color: var(--ink); font-family: Georgia, serif; font-size: 1rem; font-weight: 700; cursor: pointer; }
+    .btn-aa:hover, .btn-aa[aria-expanded="true"] { border-color: var(--verde); color: var(--verde); }
+    .panel-lectura { position: absolute; right: 0; top: calc(100% + 8px); z-index: 30; min-width: 268px; background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 14px; box-shadow: 0 10px 28px rgba(35, 31, 28, .14); display: grid; gap: 12px; }
+    .panel-lectura[hidden] { display: none; }
+    .panel-lectura .fila { display: flex; align-items: center; justify-content: space-between; gap: 14px; font-size: .9375rem; }
+    .panel-lectura .par { display: flex; gap: 6px; }
+    .panel-lectura .fila > span:first-child { white-space: nowrap; }
+    .panel-lectura button { min-height: 40px; min-width: 44px; padding: 0 10px; border: 1px solid var(--line); border-radius: 4px; background: #fff; color: var(--ink); font: inherit; font-size: .875rem; font-weight: 700; cursor: pointer; }
+    .panel-lectura button:disabled { opacity: .4; cursor: not-allowed; }
+    .panel-lectura button:hover:not(:disabled) { border-color: var(--verde); color: var(--verde); }
+    .panel-lectura #btn-contraste[aria-pressed="true"] { background: var(--verde); border-color: var(--verde); color: #fff; }
+
+    /* Pestañas planas: texto y una línea bajo la sección activa */
+    .menu { background: #fff; border-top: 1px solid var(--line); }
+    .tab-scroll { counter-reset: sec; padding-block: 0; gap: 2px; }
+    .tab { border-radius: 0; background: none; border-bottom: 2px solid transparent; padding: 0 12px; font-size: .875rem; font-weight: 500; color: var(--muted); }
+    .tab::before { counter-increment: sec; content: counter(sec, decimal-leading-zero); display: none; }
+    .tab:hover { background: none; color: var(--verde); border-bottom-color: var(--line); }
+    .tab.activo { background: none; color: var(--verde); font-weight: 700; border-bottom-color: var(--verde); }
+
+    /* Tipografía y color */
+    .lead, .war-lead, .baneo-intro { max-width: 62ch; }
+    .lead { font-size: 1.125rem; }
+    .hero { background: none; }
+    .rol:nth-child(2) { border-top-color: var(--verde); }
+    .rol:nth-child(2) .icono { background: var(--verde-suave); }
+    .rol:nth-child(2) .icono svg { stroke: var(--verde); }
+    .escalera li.cercano .nivel { background: var(--verde-osc); }
+
+    @media (max-width: 800px) {
+      .btn-secciones { display: inline-flex; }
+      .menu { display: none; position: absolute; left: 0; right: 0; top: 100%; border-top: 0; border-bottom: 1px solid var(--line); box-shadow: 0 16px 28px rgba(35, 31, 28, .14); max-height: calc(100vh - 64px); overflow-y: auto; }
+      .menu.abierto { display: block; }
+      .tab-scroll { flex-direction: column; overflow: visible; gap: 0; padding-block: 4px 8px; }
+      .tab { width: 100%; min-height: 50px; gap: 14px; padding: 0; border-bottom: 1px solid var(--line); font-size: 1rem; font-weight: 500; color: var(--ink); }
+      .tab::before { display: inline; width: 24px; color: var(--rojo); font-size: .8125rem; font-weight: 700; }
+      .tab:last-child { border-bottom: 0; }
+      .tab.activo { color: var(--verde); font-weight: 700; border-bottom-color: var(--line); box-shadow: inset 3px 0 0 var(--verde); padding-left: 12px; }
+      .tab.activo::before { color: var(--verde); }
+      #cabecera.cab-oculta { transform: translateY(-100%); }
+    }
+    @media (max-width: 660px) {
+      .nav { height: 56px; }
+      .brand-name { font-size: 1.125rem; }
+      .brand-mark { width: 28px; height: 28px; }
+      .brand-mark::after { inset: 6px; }
+      .lead { font-size: 1.0625rem; }
+      section.tab-panel { padding: 36px 0 44px; }
+      .hero { padding: 24px 0 28px; }
+      h1 { font-size: clamp(2rem, 9vw, 2.4rem); margin: 10px 0 12px; }
+      .eyebrow { font-size: .6875rem; letter-spacing: 1.2px; gap: 8px; }
+      .eyebrow::before { width: 18px; }
+      .hero .lead { font-size: 1rem; line-height: 1.65; }
+      .para-quien { font-size: 1rem; margin-top: 12px; }
+      .hero-visual .hero-card { display: none; }
+      .hero-img img { aspect-ratio: 16 / 11; object-position: center 30%; }
+      .hero-actions { margin-top: 18px; }
+    }
+    @media (max-width: 360px) { .brand-name { display: none; } }
+
     @media print {
       @page { margin: 16mm; }
       * { background: transparent !important; color: #000 !important; box-shadow: none !important; animation: none !important; }
-      header, .recorrido-inicio, .recorrido-fin, footer, .salto, .topline, .progreso, .controles { display: none !important; }
+      header, .recorrido-inicio, .recorrido-fin, footer, .salto, .topline, .progreso, .controles, .lectura { display: none !important; }
       .solo-imprimir { display: block; font-weight: 700; border-bottom: 2px solid #000; padding-bottom: 6px; margin-bottom: 14px; font-size: 11pt; }
       body { font-size: 12pt; line-height: 1.5; }
       section.tab-panel, .hero { padding: 0 0 14px; }
@@ -604,16 +676,22 @@
   <a class="salto" href="#contenido">Saltar al contenido</a>
   <div class="topline" aria-hidden="true"></div>
 
-  <header>
+  <div class="progreso" aria-hidden="true"><span id="progreso-barra"></span></div>
+  <header id="cabecera">
     <div class="nav wrap">
       <a class="brand" href="#inicio-tab" aria-label="X Tunas, inicio">
         <span class="brand-mark" aria-hidden="true"></span>
         <span><span class="brand-name">X Tunas</span><span class="brand-sub">Región Militar Las Tunas</span></span>
       </a>
-      <div class="controles" role="group" aria-label="Opciones de lectura">
-        <button type="button" id="btn-menos" aria-label="Reducir el tamaño de la letra">A−</button>
-        <button type="button" id="btn-mas" aria-label="Aumentar el tamaño de la letra">A+</button>
-        <button type="button" id="btn-contraste" aria-pressed="false">Contraste</button>
+      <div class="acciones-cab">
+        <button type="button" class="btn-secciones" id="btn-secciones" aria-expanded="false" aria-controls="tabbar"><span id="secciones-actual">1 · Inicio</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="lectura">
+          <button type="button" class="btn-aa" id="btn-aa" aria-expanded="false" aria-controls="panel-lectura" aria-label="Opciones de lectura: tamaño de letra y contraste">Aa</button>
+          <div class="panel-lectura" id="panel-lectura" role="group" aria-label="Opciones de lectura" hidden>
+            <div class="fila"><span>Tamaño de letra</span><span class="par"><button type="button" id="btn-menos" aria-label="Reducir el tamaño de la letra">A−</button><button type="button" id="btn-mas" aria-label="Aumentar el tamaño de la letra">A+</button></span></div>
+            <div class="fila"><span>Alto contraste</span><button type="button" id="btn-contraste" aria-pressed="false">Activar</button></div>
+          </div>
+        </div>
       </div>
     </div>
     <nav class="menu" id="tabbar" aria-label="Secciones del portal">
@@ -629,7 +707,6 @@
         <a class="tab" href="#preguntas-tab" data-tab="preguntas">Preguntas</a>
       </div>
     </nav>
-    <div class="progreso" aria-hidden="true"><span id="progreso-barra"></span></div>
   </header>
 
   <main id="contenido">
@@ -1251,6 +1328,8 @@
       pestanaActual = nombre;
       activarPestana(nombre);
       const indice = recorrido.findIndex(item => item[0] === nombre);
+      const rotulo = document.querySelector('#secciones-actual');
+      if (rotulo) rotulo.textContent = (indice + 1) + ' · ' + recorrido[indice][1];
       const ultima = indice === recorrido.length - 1;
       const destino = ultima ? recorrido[0] : recorrido[indice + 1];
       siguiente.href = '#' + destino[0] + '-tab';
@@ -1392,11 +1471,13 @@
       function aplicarContraste(activo) {
         if (activo) raiz.setAttribute('data-contraste', 'alto'); else raiz.removeAttribute('data-contraste');
         contraste.setAttribute('aria-pressed', String(activo));
+        contraste.textContent = activo ? 'Activado' : 'Activar';
         guardar('xt-contraste', activo ? '1' : '');
       }
       contraste.addEventListener('click', () => aplicarContraste(raiz.getAttribute('data-contraste') !== 'alto'));
       aplicarTam();
       contraste.setAttribute('aria-pressed', String(raiz.getAttribute('data-contraste') === 'alto'));
+      contraste.textContent = raiz.getAttribute('data-contraste') === 'alto' ? 'Activado' : 'Activar';
     })();
 
     // IMPRIMIR: abre los desplegables para que salga todo el contenido
@@ -1420,6 +1501,50 @@
         boton.closest('li').classList.add('sel');
         if (window.innerWidth <= 960) diagrama.querySelector('.anillos').scrollIntoView({ block: 'center', behavior: 'smooth' });
       }));
+    })();
+  </script>
+
+  <script>
+    // ENCABEZADO: menú de secciones, panel de lectura y plegado al bajar (móvil)
+    (function () {
+      const cab = document.querySelector('#cabecera');
+      const menu = document.querySelector('#tabbar');
+      const btnSec = document.querySelector('#btn-secciones');
+      const btnAa = document.querySelector('#btn-aa');
+      const panel = document.querySelector('#panel-lectura');
+      function cerrarMenu() { menu.classList.remove('abierto'); btnSec.setAttribute('aria-expanded', 'false'); }
+      function cerrarPanel() { panel.hidden = true; btnAa.setAttribute('aria-expanded', 'false'); }
+      btnSec.addEventListener('click', () => {
+        const abrir = !menu.classList.contains('abierto');
+        cerrarPanel();
+        menu.classList.toggle('abierto', abrir);
+        btnSec.setAttribute('aria-expanded', String(abrir));
+      });
+      btnAa.addEventListener('click', () => {
+        const abrir = panel.hidden;
+        cerrarMenu();
+        panel.hidden = !abrir;
+        btnAa.setAttribute('aria-expanded', String(abrir));
+      });
+      document.addEventListener('click', e => {
+        if (!panel.contains(e.target) && !btnAa.contains(e.target)) cerrarPanel();
+        if (!menu.contains(e.target) && !btnSec.contains(e.target)) cerrarMenu();
+      });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') { cerrarPanel(); cerrarMenu(); } });
+      menu.querySelectorAll('a.tab').forEach(a => a.addEventListener('click', cerrarMenu));
+
+      // En móvil el encabezado se pliega al bajar y reaparece al subir
+      let ultimo = window.scrollY;
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        const movil = window.innerWidth <= 800;
+        const abierto = menu.classList.contains('abierto') || !panel.hidden;
+        if (!movil || abierto || y <= 90) cab.classList.remove('cab-oculta');
+        else if (y > ultimo + 6) cab.classList.add('cab-oculta');
+        else if (y < ultimo - 6) cab.classList.remove('cab-oculta');
+        ultimo = y;
+      }, { passive: true });
+      cab.addEventListener('focusin', () => cab.classList.remove('cab-oculta'));
     })();
   </script>
 </body>
