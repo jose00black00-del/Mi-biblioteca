@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#f7f6f2">
   <meta name="description" content="Portal de la Región Militar Las Tunas para oficiales, soldados y trabajadores civiles: cómo se organiza la defensa (MTT, Consejos de Defensa, Zonas) y una guía práctica para participar en las redes con datos y criterio.">
   <title>X Tunas — Región Militar Las Tunas</title>
+  <script>try{var d=document.documentElement,t=localStorage.getItem("xt-tam"),c=localStorage.getItem("xt-contraste");if(t)d.setAttribute("data-tam",t);if(c==="1")d.setAttribute("data-contraste","alto");}catch(e){}</script>
   <style>
     :root {
       color-scheme: light;
@@ -29,7 +30,7 @@
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; scroll-padding-top: 130px; }
-    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; background: var(--paper); color: var(--ink); font-size: 18px; line-height: 1.7; }
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; background: var(--paper); color: var(--ink); font-size: 1.125rem; line-height: 1.7; }
     h1, h2, h3 { overflow-wrap: break-word; }
     h1, h2, .brand-name { font-family: Georgia, 'Times New Roman', serif; }
     a { color: inherit; }
@@ -45,50 +46,50 @@
     .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
     .brand-mark { width: 34px; height: 34px; border-radius: 50%; background: conic-gradient(var(--verde) 0 50%, var(--rojo) 50% 100%); position: relative; flex: none; }
     .brand-mark::after { content: ''; position: absolute; inset: 8px; border-radius: 50%; background: var(--paper); }
-    .brand-name { display: block; font-size: 20px; font-weight: 700; line-height: 1.15; }
-    .brand-sub { display: block; font-size: 11px; color: var(--muted); letter-spacing: 1.2px; text-transform: uppercase; line-height: 1.3; }
-    .nav-cta { font-size: 15px; text-decoration: none; background: var(--verde); color: #fff; padding: 10px 18px; border-radius: 8px; font-weight: 700; white-space: nowrap; }
+    .brand-name { display: block; font-size: 1.25rem; font-weight: 700; line-height: 1.15; }
+    .brand-sub { display: block; font-size: 0.6875rem; color: var(--muted); letter-spacing: 1.2px; text-transform: uppercase; line-height: 1.3; }
+    .nav-cta { font-size: 0.9375rem; text-decoration: none; background: var(--verde); color: #fff; padding: 10px 18px; border-radius: 8px; font-weight: 700; white-space: nowrap; }
     .nav-cta:hover { background: var(--verde-osc); }
     .menu { border-top: 1px solid var(--line); background: #fff; }
 
     /* BASE DE SECCIONES */
     section { padding: 84px 0; }
     .alt { background: #fff; border-block: 1px solid var(--line); }
-    .kicker { font-size: 13px; letter-spacing: 1.8px; text-transform: uppercase; color: var(--rojo); font-weight: 700; margin-bottom: 10px; }
-    h2 { font-size: clamp(28px, 3.6vw, 40px); line-height: 1.15; letter-spacing: -0.4px; max-width: 24em; }
-    h3 { font-size: 20px; line-height: 1.3; }
-    .lead { color: var(--muted); font-size: 19px; max-width: 46rem; margin-top: 16px; }
+    .kicker { font-size: 0.8125rem; letter-spacing: 1.8px; text-transform: uppercase; color: var(--rojo); font-weight: 700; margin-bottom: 10px; }
+    h2 { font-size: clamp(1.75rem, 3.6vw, 2.5rem); line-height: 1.15; letter-spacing: -0.4px; max-width: 24em; }
+    h3 { font-size: 1.25rem; line-height: 1.3; }
+    .lead { color: var(--muted); font-size: 1.1875rem; max-width: 46rem; margin-top: 16px; }
     .sec-head { margin-bottom: 40px; }
 
-    .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 50px; background: var(--verde); color: #fff; padding: 12px 26px; border-radius: 10px; text-decoration: none; font: inherit; font-size: 16.5px; font-weight: 700; border: 0; cursor: pointer; transition: transform .15s, box-shadow .15s; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 50px; background: var(--verde); color: #fff; padding: 12px 26px; border-radius: 10px; text-decoration: none; font: inherit; font-size: 1.03125rem; font-weight: 700; border: 0; cursor: pointer; transition: transform .15s, box-shadow .15s; }
     .button:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(14, 77, 43, .25); }
-    .button-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 50px; padding: 12px 26px; border-radius: 10px; text-decoration: none; font: inherit; font-size: 16.5px; font-weight: 600; border: 2px solid var(--verde); color: var(--verde); background: transparent; }
+    .button-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 50px; padding: 12px 26px; border-radius: 10px; text-decoration: none; font: inherit; font-size: 1.03125rem; font-weight: 600; border: 2px solid var(--verde); color: var(--verde); background: transparent; }
     .button-secondary:hover { background: var(--verde); color: #fff; }
 
     /* INICIO */
     .hero { padding: 72px 0 64px; background: radial-gradient(1000px 440px at 85% -10%, rgba(14, 77, 43, .10), transparent 60%), radial-gradient(800px 400px at 5% 110%, rgba(192, 39, 47, .08), transparent 55%); }
     .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; letter-spacing: 1.8px; text-transform: uppercase; color: var(--verde); font-weight: 700; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 0.8125rem; letter-spacing: 1.8px; text-transform: uppercase; color: var(--verde); font-weight: 700; }
     .eyebrow::before { content: ''; width: 26px; height: 3px; background: var(--rojo); }
-    h1 { font-size: clamp(38px, 5.4vw, 60px); line-height: 1.08; letter-spacing: -1px; margin: 16px 0 20px; }
+    h1 { font-size: clamp(2.375rem, 5.4vw, 3.75rem); line-height: 1.08; letter-spacing: -1px; margin: 16px 0 20px; }
     h1 em { font-style: italic; color: var(--verde); }
     .hero p.lead { margin-top: 0; }
     .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
     .hero-card { background: var(--verde); color: #fff; border-radius: 18px; padding: 30px 28px; box-shadow: 0 22px 44px rgba(14, 77, 43, .28); }
-    .hero-card .hc-top { font-size: 12.5px; letter-spacing: 1.6px; text-transform: uppercase; opacity: .85; }
-    .hero-card h2 { font-size: 26px; margin: 12px 0 10px; color: #fff; }
-    .hero-card p { font-size: 16px; opacity: .92; }
+    .hero-card .hc-top { font-size: 0.78125rem; letter-spacing: 1.6px; text-transform: uppercase; opacity: .85; }
+    .hero-card h2 { font-size: 1.625rem; margin: 12px 0 10px; color: #fff; }
+    .hero-card p { font-size: 1rem; opacity: .92; }
     .hero-card .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; }
-    .tag { font-size: 12.5px; letter-spacing: .8px; text-transform: uppercase; border: 1px solid rgba(255, 255, 255, .45); padding: 5px 12px; border-radius: 999px; }
+    .tag { font-size: 0.78125rem; letter-spacing: .8px; text-transform: uppercase; border: 1px solid rgba(255, 255, 255, .45); padding: 5px 12px; border-radius: 999px; }
 
     .atajos { padding: 0 0 20px; margin-top: -8px; }
-    .atajos h2 { font-size: 22px; font-family: system-ui, sans-serif; margin-bottom: 14px; letter-spacing: 0; }
+    .atajos h2 { font-size: 1.375rem; font-family: system-ui, sans-serif; margin-bottom: 14px; letter-spacing: 0; }
     .atajos-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
     .atajo { display: flex; flex-direction: column; gap: 4px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 18px 16px; text-decoration: none; box-shadow: var(--sombra); transition: transform .15s, border-color .15s; }
     .atajo:hover { transform: translateY(-3px); border-color: var(--verde); }
-    .atajo b { font-size: 17px; color: var(--verde); }
-    .atajo span { font-size: 15px; color: var(--muted); line-height: 1.5; }
-    .atajo .num { font-size: 13px; color: var(--rojo); font-weight: 700; letter-spacing: 1px; }
+    .atajo b { font-size: 1.0625rem; color: var(--verde); }
+    .atajo span { font-size: 0.9375rem; color: var(--muted); line-height: 1.5; }
+    .atajo .num { font-size: 0.8125rem; color: var(--rojo); font-weight: 700; letter-spacing: 1px; }
 
     /* ESTRUCTURA: diagrama */
     .diagrama { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
@@ -97,25 +98,25 @@
     .escalera li:last-child { padding-bottom: 0; }
     .escalera li::before { content: ''; position: absolute; left: 21px; top: 44px; bottom: 0; width: 3px; background: var(--verde-suave); }
     .escalera li:last-child::before { display: none; }
-    .escalera .nivel { position: absolute; left: 0; top: 0; width: 44px; height: 44px; border-radius: 50%; background: var(--verde); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 17px; }
+    .escalera .nivel { position: absolute; left: 0; top: 0; width: 44px; height: 44px; border-radius: 50%; background: var(--verde); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 1.0625rem; }
     .escalera li.cercano .nivel { background: var(--rojo); }
-    .escalera h3 { font-size: 19px; }
-    .escalera p { font-size: 16px; color: var(--muted); margin-top: 3px; }
-    .escalera-eje { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; font-weight: 700; }
+    .escalera h3 { font-size: 1.1875rem; }
+    .escalera p { font-size: 1rem; color: var(--muted); margin-top: 3px; }
+    .escalera-eje { display: flex; justify-content: space-between; font-size: 0.8125rem; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; font-weight: 700; }
     .panel-verde { background: var(--panel-verde); color: var(--card-ink); border-radius: 18px; padding: 34px 32px; }
-    .panel-verde h3 { font-size: 22px; margin-bottom: 8px; }
-    .panel-verde > p { color: var(--card-muted); font-size: 16.5px; }
+    .panel-verde h3 { font-size: 1.375rem; margin-bottom: 8px; }
+    .panel-verde > p { color: var(--card-muted); font-size: 1.03125rem; }
     .def-lista { display: grid; gap: 12px; margin-top: 20px; }
     .def { background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 255, 255, .13); border-radius: 12px; padding: 16px 18px; }
-    .def h4 { font-size: 17px; color: #fff; }
-    .def h4 small { color: var(--rojo-brill); font-size: 14px; font-weight: 700; margin-left: 6px; }
-    .def p { font-size: 15.5px; color: var(--card-muted); margin-top: 4px; line-height: 1.6; }
-    .nota { margin-top: 22px; font-size: 14.5px; color: var(--muted); }
+    .def h4 { font-size: 1.0625rem; color: #fff; }
+    .def h4 small { color: var(--rojo-brill); font-size: 0.875rem; font-weight: 700; margin-left: 6px; }
+    .def p { font-size: 0.96875rem; color: var(--card-muted); margin-top: 4px; line-height: 1.6; }
+    .nota { margin-top: 22px; font-size: 0.90625rem; color: var(--muted); }
     .nota a { color: var(--verde); }
     .base-legal { margin-top: 44px; display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: center; background: #fff; border: 1px solid var(--line); border-left: 5px solid var(--rojo); border-radius: var(--radius); padding: 24px 26px; }
-    .base-legal .sello { font-family: Georgia, serif; font-size: 34px; font-weight: 700; color: var(--verde); line-height: 1; text-align: center; }
-    .base-legal .sello small { display: block; font-family: system-ui, sans-serif; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
-    .base-legal p { font-size: 16.5px; color: var(--muted); }
+    .base-legal .sello { font-family: Georgia, serif; font-size: 2.125rem; font-weight: 700; color: var(--verde); line-height: 1; text-align: center; }
+    .base-legal .sello small { display: block; font-family: system-ui, sans-serif; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+    .base-legal p { font-size: 1.03125rem; color: var(--muted); }
     .base-legal strong { color: var(--ink); }
 
     /* TU LUGAR */
@@ -126,105 +127,105 @@
     .rol:nth-child(2) .icono { background: var(--rojo-suave); }
     .rol .icono svg { width: 26px; height: 26px; stroke: var(--verde); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
     .rol:nth-child(2) .icono svg { stroke: var(--rojo); }
-    .rol h3 { font-size: 22px; margin-bottom: 6px; }
-    .rol > p { font-size: 16px; color: var(--muted); }
-    .rol ul { margin: 14px 0 0 20px; font-size: 16px; color: var(--ink); }
+    .rol h3 { font-size: 1.375rem; margin-bottom: 6px; }
+    .rol > p { font-size: 1rem; color: var(--muted); }
+    .rol ul { margin: 14px 0 0 20px; font-size: 1rem; color: var(--ink); }
     .rol li { margin-bottom: 8px; }
-    .aviso { display: flex; gap: 14px; margin-top: 26px; background: var(--rojo-suave); border: 1px solid #e6c9c2; border-radius: var(--radius); padding: 18px 22px; font-size: 16px; }
-    .aviso .ic { flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--rojo); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 16px; }
+    .aviso { display: flex; gap: 14px; margin-top: 26px; background: var(--rojo-suave); border: 1px solid #e6c9c2; border-radius: var(--radius); padding: 18px 22px; font-size: 1rem; }
+    .aviso .ic { flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--rojo); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 1rem; }
 
     /* EMPEZAR: pasos */
     .pasos { display: grid; gap: 18px; counter-reset: paso; }
     .paso { display: grid; grid-template-columns: 64px 1fr; gap: 20px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 26px; box-shadow: var(--sombra); }
-    .paso::before { counter-increment: paso; content: counter(paso); width: 52px; height: 52px; border-radius: 50%; background: var(--verde); color: #fff; font-family: Georgia, serif; font-size: 26px; font-weight: 700; display: grid; place-items: center; }
-    .paso h3 { font-size: 21px; }
-    .paso > div > p { color: var(--muted); font-size: 16.5px; margin-top: 4px; }
-    .paso ol { margin: 12px 0 0 22px; font-size: 16.5px; }
+    .paso::before { counter-increment: paso; content: counter(paso); width: 52px; height: 52px; border-radius: 50%; background: var(--verde); color: #fff; font-family: Georgia, serif; font-size: 1.625rem; font-weight: 700; display: grid; place-items: center; }
+    .paso h3 { font-size: 1.3125rem; }
+    .paso > div > p { color: var(--muted); font-size: 1.03125rem; margin-top: 4px; }
+    .paso ol { margin: 12px 0 0 22px; font-size: 1.03125rem; }
     .paso li { margin-bottom: 7px; }
     .ejemplo-bloque { margin-top: 44px; }
-    .ejemplo-bloque > h3 { font-size: 24px; font-family: Georgia, serif; }
-    .ejemplo-bloque > p { color: var(--muted); font-size: 17px; margin-top: 6px; max-width: 46rem; }
+    .ejemplo-bloque > h3 { font-size: 1.5rem; font-family: Georgia, serif; }
+    .ejemplo-bloque > p { color: var(--muted); font-size: 1.0625rem; margin-top: 6px; max-width: 46rem; }
     .comparar { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 22px; }
-    .caso .etiqueta { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; padding: 6px 14px; border-radius: 999px; margin-bottom: 12px; }
+    .caso .etiqueta { display: inline-flex; align-items: center; gap: 8px; font-size: 0.875rem; font-weight: 700; padding: 6px 14px; border-radius: 999px; margin-bottom: 12px; }
     .caso.bien .etiqueta { background: #e4f3e8; color: #145034; }
     .caso.mal .etiqueta { background: var(--rojo-suave); color: #8d1f26; }
     .post { background: #fff; border: 1px solid #d9d3ca; border-radius: 16px; padding: 18px 20px; box-shadow: var(--sombra); }
     .post-cab { display: flex; align-items: center; gap: 12px; }
     .avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--verde-suave); color: var(--verde); display: grid; place-items: center; font-weight: 700; flex: none; }
     .caso.mal .avatar { background: #ddd; color: #666; }
-    .post-cab b { display: block; font-size: 16px; line-height: 1.2; }
-    .post-cab span { font-size: 14px; color: var(--muted); }
-    .post-texto { margin-top: 12px; font-size: 16.5px; line-height: 1.6; }
+    .post-cab b { display: block; font-size: 1rem; line-height: 1.2; }
+    .post-cab span { font-size: 0.875rem; color: var(--muted); }
+    .post-texto { margin-top: 12px; font-size: 1.03125rem; line-height: 1.6; }
     .post-texto .hash { color: var(--verde); font-weight: 600; }
-    .post-cita { margin-top: 12px; border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; font-size: 14.5px; color: var(--muted); background: var(--paper); }
+    .post-cita { margin-top: 12px; border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; font-size: 0.90625rem; color: var(--muted); background: var(--paper); }
     .post-cita b { color: var(--ink); }
-    .post-pie { margin-top: 12px; display: flex; gap: 22px; font-size: 14px; color: var(--muted); }
-    .caso ul { margin: 14px 0 0 20px; font-size: 15.5px; color: var(--muted); }
+    .post-pie { margin-top: 12px; display: flex; gap: 22px; font-size: 0.875rem; color: var(--muted); }
+    .caso ul { margin: 14px 0 0 20px; font-size: 0.96875rem; color: var(--muted); }
     .caso li { margin-bottom: 4px; }
-    .ficticio { margin-top: 14px; font-size: 14px; color: var(--muted); font-style: italic; }
+    .ficticio { margin-top: 14px; font-size: 0.875rem; color: var(--muted); font-style: italic; }
 
     /* FUENTES */
     .fuentes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
     .fuente { display: flex; flex-direction: column; gap: 6px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; text-decoration: none; transition: transform .15s, border-color .15s; }
     .fuente:hover { transform: translateY(-3px); border-color: var(--verde); }
     .fuente.local { background: var(--verde-suave); border-color: rgba(14, 77, 43, .3); }
-    .fuente .tipo { font-size: 12.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--rojo); font-weight: 700; }
-    .fuente h3 { font-size: 20px; }
-    .fuente p { font-size: 15.5px; color: var(--muted); line-height: 1.6; }
-    .fuente .ir { margin-top: auto; padding-top: 8px; font-weight: 700; color: var(--verde); font-size: 15.5px; }
+    .fuente .tipo { font-size: 0.78125rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--rojo); font-weight: 700; }
+    .fuente h3 { font-size: 1.25rem; }
+    .fuente p { font-size: 0.96875rem; color: var(--muted); line-height: 1.6; }
+    .fuente .ir { margin-top: auto; padding-top: 8px; font-weight: 700; color: var(--verde); font-size: 0.96875rem; }
 
     /* MANUAL */
     .reglas { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 26px; }
     .regla { display: flex; gap: 16px; background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 255, 255, .13); border-radius: 12px; padding: 18px 20px; }
-    .regla .n { color: var(--rojo-brill); font-weight: 700; font-size: 20px; font-family: Georgia, serif; flex: none; }
-    .regla h3 { font-size: 18px; color: #fff; margin-bottom: 4px; }
-    .regla p { font-size: 15.5px; color: var(--card-muted); line-height: 1.6; }
-    .manual-pie { margin-top: 22px; font-size: 16px; color: var(--card-ink); border-top: 1px dashed rgba(255, 255, 255, .3); padding-top: 16px; }
+    .regla .n { color: var(--rojo-brill); font-weight: 700; font-size: 1.25rem; font-family: Georgia, serif; flex: none; }
+    .regla h3 { font-size: 1.125rem; color: #fff; margin-bottom: 4px; }
+    .regla p { font-size: 0.96875rem; color: var(--card-muted); line-height: 1.6; }
+    .manual-pie { margin-top: 22px; font-size: 1rem; color: var(--card-ink); border-top: 1px dashed rgba(255, 255, 255, .3); padding-top: 16px; }
 
     /* GLOSARIO */
     .glosario { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 24px; margin-top: 8px; }
     .term { padding: 14px 0; border-bottom: 1px solid var(--line); }
-    .term dt { font-weight: 700; color: var(--verde); font-size: 17px; }
-    .term dd { font-size: 16px; color: var(--muted); margin-top: 2px; }
+    .term dt { font-weight: 700; color: var(--verde); font-size: 1.0625rem; }
+    .term dd { font-size: 1rem; color: var(--muted); margin-top: 2px; }
 
     /* REGISTRO */
     .registro-panel { background: #fff; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: 0 14px 38px rgba(35, 31, 28, .07); }
     .registro-head { background: linear-gradient(135deg, var(--verde) 0%, var(--verde-osc) 100%); color: var(--card-ink); padding: 34px 40px; }
     .registro-head .kicker { color: #f3c9c2; }
-    .registro-head p { color: var(--card-muted); font-size: 16.5px; margin-top: 10px; max-width: 46rem; }
+    .registro-head p { color: var(--card-muted); font-size: 1.03125rem; margin-top: 10px; max-width: 46rem; }
     .registro-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .85fr); gap: 40px; padding: 36px 40px 40px; align-items: start; }
     .campo { display: grid; gap: 7px; margin-bottom: 20px; }
-    .campo label { font-size: 15px; font-weight: 700; color: var(--verde); }
-    .campo .hint { font-size: 14.5px; color: var(--muted); line-height: 1.5; }
-    .campo input { font: inherit; font-size: 17px; padding: 12px 14px; min-height: 50px; border-radius: 10px; border: 2px solid #cfc8bd; background: #fff; color: var(--ink); width: 100%; }
+    .campo label { font-size: 0.9375rem; font-weight: 700; color: var(--verde); }
+    .campo .hint { font-size: 0.90625rem; color: var(--muted); line-height: 1.5; }
+    .campo input { font: inherit; font-size: 1.0625rem; padding: 12px 14px; min-height: 50px; border-radius: 10px; border: 2px solid #cfc8bd; background: #fff; color: var(--ink); width: 100%; }
     .campo input:focus { outline: none; border-color: var(--verde); box-shadow: 0 0 0 4px rgba(14, 77, 43, .15); }
-    .estado { margin: 0 0 22px; padding: 12px 16px; border-radius: 10px; background: var(--rojo-suave); color: #7d1c1c; font-size: 15px; font-weight: 600; }
+    .estado { margin: 0 0 22px; padding: 12px 16px; border-radius: 10px; background: var(--rojo-suave); color: #7d1c1c; font-size: 0.9375rem; font-weight: 600; }
     .acciones { display: flex; gap: 12px; flex-wrap: wrap; }
     .acciones .deshabilitado { opacity: .45; cursor: not-allowed; }
     .ficha-card { background: var(--verde-osc); border-radius: 14px; padding: 24px 26px; min-width: 0; }
-    .ficha-card h3 { color: var(--card-ink); font-size: 15px; letter-spacing: 1.4px; text-transform: uppercase; }
-    .ficha-card .sub { color: var(--card-muted); font-size: 14.5px; margin: 6px 0 14px; }
-    .ficha-pre { margin: 0; background: rgba(7, 17, 12, .65); border: 1px solid rgba(216, 224, 216, .18); border-radius: 10px; padding: 16px 18px; color: #d9e4d9; font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.7; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .ficha-card h3 { color: var(--card-ink); font-size: 0.9375rem; letter-spacing: 1.4px; text-transform: uppercase; }
+    .ficha-card .sub { color: var(--card-muted); font-size: 0.90625rem; margin: 6px 0 14px; }
+    .ficha-pre { margin: 0; background: rgba(7, 17, 12, .65); border: 1px solid rgba(216, 224, 216, .18); border-radius: 10px; padding: 16px 18px; color: #d9e4d9; font-family: 'Courier New', monospace; font-size: 0.875rem; line-height: 1.7; white-space: pre-wrap; overflow-wrap: anywhere; }
 
     /* PREGUNTAS */
     .faq-list { display: grid; gap: 12px; max-width: 52rem; }
     .faq-list details { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 4px 22px; }
-    .faq-list summary { cursor: pointer; font-weight: 700; font-size: 17.5px; padding: 16px 0; min-height: 52px; }
+    .faq-list summary { cursor: pointer; font-weight: 700; font-size: 1.09375rem; padding: 16px 0; min-height: 52px; }
     .faq-list details[open] summary { color: var(--verde); }
-    .faq-list p { padding-bottom: 18px; color: var(--muted); font-size: 16.5px; }
+    .faq-list p { padding-bottom: 18px; color: var(--muted); font-size: 1.03125rem; }
 
     /* CIERRE Y PIE */
     .cierre { background: var(--verde-osc); color: var(--card-ink); padding: 60px 0; }
     .cierre-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
-    .cierre h2 { font-size: clamp(26px, 3.2vw, 36px); color: var(--card-ink); }
-    .cierre p { margin-top: 12px; color: var(--card-muted); font-size: 17px; max-width: 36rem; }
+    .cierre h2 { font-size: clamp(1.625rem, 3.2vw, 2.25rem); color: var(--card-ink); }
+    .cierre p { margin-top: 12px; color: var(--card-muted); font-size: 1.0625rem; max-width: 36rem; }
     .cierre .button { background: var(--rojo); }
-    footer { background: var(--verde-osc); color: var(--card-muted); border-top: 1px solid rgba(255, 255, 255, .14); padding: 30px 0 38px; font-size: 14.5px; }
+    footer { background: var(--verde-osc); color: var(--card-muted); border-top: 1px solid rgba(255, 255, 255, .14); padding: 30px 0 38px; font-size: 0.90625rem; }
     .footer-inner { display: flex; justify-content: space-between; gap: 24px; }
-    .footer-brand { color: var(--card-ink); font-size: 17px; font-weight: 700; }
-    .status-label { font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--rojo-brill); border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; padding: 4px 11px; margin-left: 10px; }
+    .footer-brand { color: var(--card-ink); font-size: 1.0625rem; font-weight: 700; }
+    .status-label { font-size: 0.75rem; letter-spacing: 1.4px; text-transform: uppercase; color: var(--rojo-brill); border: 1px solid rgba(255, 255, 255, .28); border-radius: 999px; padding: 4px 11px; margin-left: 10px; }
     .footer-meta { max-width: 40rem; text-align: right; line-height: 1.7; }
-    .footer-fuentes { margin-top: 18px; font-size: 13.5px; }
+    .footer-fuentes { margin-top: 18px; font-size: 0.84375rem; }
 
     @media (max-width: 960px) {
       .hero-grid, .diagrama, .registro-body { grid-template-columns: 1fr; gap: 32px; }
@@ -236,14 +237,14 @@
     }
     @media (max-width: 660px) {
       .ilustracion { grid-template-columns: 1fr !important; }
-      body { font-size: 17px; }
+      body { font-size: 1.0625rem; }
       .wrap { padding: 0 18px; }
       section { padding: 52px 0; }
       .nav { height: 58px; }
-      .brand-sub { font-size: 9.5px; }
+      .brand-sub { font-size: 0.59375rem; }
       .nav-cta { display: none; }
       .hero { padding: 40px 0 36px; }
-      .lead { font-size: 17.5px; }
+      .lead { font-size: 1.09375rem; }
       .hero-actions > * { flex: 1 1 100%; }
       .atajos-grid, .roles, .fuentes { grid-template-columns: 1fr; }
       .paso { grid-template-columns: 1fr; gap: 12px; padding: 20px; }
@@ -261,53 +262,53 @@
     /* ── SECCIONES SEPARADAS (pestañas) ── */
     .tab-panel.oculto { display: none !important; }
     .tab-scroll { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: thin; padding-block: 6px; }
-    .tab { flex: none; display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 8px; text-decoration: none; font-size: 15.5px; font-weight: 600; color: var(--muted); border-bottom: 3px solid transparent; white-space: nowrap; }
+    .tab { flex: none; display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 8px; text-decoration: none; font-size: 0.96875rem; font-weight: 600; color: var(--muted); border-bottom: 3px solid transparent; white-space: nowrap; }
     .tab:hover { color: var(--verde); background: var(--soft); }
     .tab.activo { color: var(--verde); background: var(--verde-suave); border-bottom-color: var(--rojo); }
     section.tab-panel { padding: 64px 0 72px; }
     .recorrido-inicio, .recorrido-fin { padding-top: 14px; }
     .recorrido-inicio[hidden], .recorrido-fin[hidden], .recorrido-fin a[hidden] { display: none; }
-    .volver-seccion, .recorrido-fin a { min-height: 44px; display: inline-flex; align-items: center; gap: 9px; color: var(--verde); font: inherit; font-size: 16px; font-weight: 700; text-decoration: none; }
+    .volver-seccion, .recorrido-fin a { min-height: 44px; display: inline-flex; align-items: center; gap: 9px; color: var(--verde); font: inherit; font-size: 1rem; font-weight: 700; text-decoration: none; }
     .volver-seccion { border: 0; padding: 0 4px; background: transparent; cursor: pointer; }
     .recorrido-fin { margin-bottom: 40px; }
     .recorrido-fin-inner { border-top: 1px solid var(--line); padding-top: 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px 20px; flex-wrap: wrap; }
-    .recorrido-fin-label { color: var(--muted); font-size: 14.5px; }
+    .recorrido-fin-label { color: var(--muted); font-size: 0.90625rem; }
     .recorrido-fin-links { display: flex; flex-wrap: wrap; gap: 8px 24px; }
     .recorrido-fin a:hover, .volver-seccion:hover { color: var(--rojo); }
 
     /* Inicio */
-    .para-quien { margin: 14px 0 0; padding: 12px 16px; border-left: 4px solid var(--rojo); background: #fff; border-radius: 0 10px 10px 0; font-size: 16.5px; max-width: 46rem; }
+    .para-quien { margin: 14px 0 0; padding: 12px 16px; border-left: 4px solid var(--rojo); background: #fff; border-radius: 0 10px 10px 0; font-size: 1.03125rem; max-width: 46rem; }
     .hero-card .hc-top { display: flex; justify-content: space-between; }
-    .hc-foot { margin-top: 18px; padding-top: 12px; border-top: 1px dashed rgba(255,255,255,.3); font-size: 13.5px; opacity: .75; }
+    .hc-foot { margin-top: 18px; padding-top: 12px; border-top: 1px dashed rgba(255,255,255,.3); font-size: 0.84375rem; opacity: .75; }
     .intro-strip { border-block: 1px solid var(--line); background: var(--soft); }
     .strip-grid { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 28px; padding: 22px 24px; align-items: center; }
-    .strip-lead { font-size: 18px; font-weight: 700; }
-    .strip-item { display: flex; gap: 12px; align-items: baseline; color: var(--muted); font-size: 16px; }
-    .strip-number { color: var(--rojo); font-weight: 700; font-size: 14px; }
+    .strip-lead { font-size: 1.125rem; font-weight: 700; }
+    .strip-item { display: flex; gap: 12px; align-items: baseline; color: var(--muted); font-size: 1rem; }
+    .strip-number { color: var(--rojo); font-weight: 700; font-size: 0.875rem; }
     .principles { display: grid; grid-template-columns: .9fr 1.1fr; gap: 44px; }
     .principles-intro h2 { margin: 6px 0 16px; }
-    .principles-intro p { color: var(--muted); font-size: 17px; }
+    .principles-intro p { color: var(--muted); font-size: 1.0625rem; }
     .principle-list { display: grid; gap: 12px; }
     .principle { display: flex; gap: 18px; align-items: baseline; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; }
-    .principle-index { color: var(--rojo); font-weight: 700; font-size: 15px; flex: none; }
-    .principle h3 { font-size: 18px; margin-bottom: 4px; }
-    .principle p { font-size: 15.5px; color: var(--muted); }
+    .principle-index { color: var(--rojo); font-weight: 700; font-size: 0.9375rem; flex: none; }
+    .principle h3 { font-size: 1.125rem; margin-bottom: 4px; }
+    .principle p { font-size: 0.96875rem; color: var(--muted); }
     .atajo .num { text-transform: uppercase; }
 
     /* Doctrina */
-    .war-lead { color: var(--muted); font-size: 17.5px; max-width: 52rem; margin-bottom: 30px; }
+    .war-lead { color: var(--muted); font-size: 1.09375rem; max-width: 52rem; margin-bottom: 30px; }
     .war-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
     .war-card { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 26px 24px; box-shadow: var(--sombra); }
-    .war-card h3 { font-size: 21px; margin: 8px 0; }
-    .war-card p { font-size: 16px; color: var(--muted); }
-    .war-kicker { font-size: 13px; letter-spacing: 1.8px; text-transform: uppercase; color: var(--verde); font-weight: 700; }
-    .war-quote { margin-top: 28px; border-left: 4px solid var(--rojo); padding: 8px 0 8px 22px; font-size: 18px; font-style: italic; }
-    .war-quote cite { display: block; margin-top: 8px; font-size: 14.5px; color: var(--muted); font-style: normal; }
+    .war-card h3 { font-size: 1.3125rem; margin: 8px 0; }
+    .war-card p { font-size: 1rem; color: var(--muted); }
+    .war-kicker { font-size: 0.8125rem; letter-spacing: 1.8px; text-transform: uppercase; color: var(--verde); font-weight: 700; }
+    .war-quote { margin-top: 28px; border-left: 4px solid var(--rojo); padding: 8px 0 8px 22px; font-size: 1.125rem; font-style: italic; }
+    .war-quote cite { display: block; margin-top: 8px; font-size: 0.90625rem; color: var(--muted); font-style: normal; }
     .poster-panel { display: grid; grid-template-columns: 1.05fr .95fr; gap: 38px; align-items: center; margin-top: 44px; background: radial-gradient(120% 140% at 85% 0%, #143a26 0%, #0f2e1f 60%, #0b2418 100%); border-radius: 18px; padding: 44px; }
     .poster-copy h2 { color: var(--card-ink); margin-top: 12px; }
-    .poster-copy p { color: var(--card-muted); font-size: 16.5px; margin-top: 14px; }
-    .poster-copy .poster-note { font-size: 13.5px; color: rgba(244,241,236,.6); }
-    .poster-tag { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; letter-spacing: 1.8px; text-transform: uppercase; color: #f3c9c2; font-weight: 700; }
+    .poster-copy p { color: var(--card-muted); font-size: 1.03125rem; margin-top: 14px; }
+    .poster-copy .poster-note { font-size: 0.84375rem; color: rgba(244,241,236,.6); }
+    .poster-tag { display: inline-flex; align-items: center; gap: 10px; font-size: 0.8125rem; letter-spacing: 1.8px; text-transform: uppercase; color: #f3c9c2; font-weight: 700; }
     .poster-tag::before { content: ""; width: 26px; height: 5px; border-radius: 3px; background: linear-gradient(90deg, var(--verde) 0 50%, var(--rojo) 50% 100%); }
     .poster-media { margin: 0; background: #07110c; border: 1px solid rgba(216,224,216,.16); border-radius: 14px; padding: 10px; }
     .poster-media img { display: block; width: 100%; height: auto; border-radius: 8px; }
@@ -315,12 +316,12 @@
     /* Estructura: esquema anidado */
     .anillos { margin-top: 22px; }
     .anillo { border: 2px solid rgba(255,255,255,.28); border-radius: 16px; padding: 12px 14px 14px; background: rgba(255,255,255,.05); }
-    .anillo > span { display: block; font-size: 14.5px; font-weight: 700; letter-spacing: .4px; margin-bottom: 10px; color: #fff; }
+    .anillo > span { display: block; font-size: 0.90625rem; font-weight: 700; letter-spacing: .4px; margin-bottom: 10px; color: #fff; }
     .anillo .anillo { margin-top: 2px; background: rgba(255,255,255,.07); }
     .anillo.a3 { border-color: var(--rojo-brill); }
     .anillo.a4 { background: var(--rojo); border-color: var(--rojo); text-align: center; padding: 14px; }
-    .anillo.a4 > span { margin: 0; font-size: 16px; }
-    .anillo.a4 small { font-weight: 400; font-size: 13.5px; opacity: .92; }
+    .anillo.a4 > span { margin: 0; font-size: 1rem; }
+    .anillo.a4 small { font-weight: 400; font-size: 0.84375rem; opacity: .92; }
     .panel-verde.grande { padding: 44px 40px; }
     .panel-verde h2 { color: #fff; }
     .kicker.claro { color: #f3c9c2; }
@@ -329,17 +330,17 @@
     /* Pasos */
     .paso { grid-template-columns: 64px 1fr; }
     .pasos-details { margin-top: 12px; border-top: 1px dashed var(--line); padding-top: 4px; }
-    .pasos-details summary { cursor: pointer; font-weight: 700; color: var(--verde); font-size: 16px; min-height: 44px; display: flex; align-items: center; }
+    .pasos-details summary { cursor: pointer; font-weight: 700; color: var(--verde); font-size: 1rem; min-height: 44px; display: flex; align-items: center; }
     .pasos-details ol { margin: 6px 0 0 22px; }
 
     /* Plataformas / manual / registro / preguntas */
-    .fuente .tipo { font-size: 12.5px; }
+    .fuente .tipo { font-size: 0.78125rem; }
     .registro-head h2 { color: #fff; max-width: 24em; }
     .faq { }
     .glosario-bloque { margin-top: 60px; }
-    .h2-menor { font-size: clamp(24px, 3vw, 32px); }
+    .h2-menor { font-size: clamp(1.5rem, 3vw, 2rem); }
     .glosario { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 28px; margin-top: 10px; }
-    .footer-sources { font-size: 13.5px; margin-top: 16px; }
+    .footer-sources { font-size: 0.84375rem; margin-top: 16px; }
 
     @media (max-width: 960px) {
       .war-grid { grid-template-columns: 1fr 1fr; }
@@ -354,9 +355,152 @@
       .panel-verde.grande { padding: 28px 20px; }
       .tab-scroll { padding-right: 18px; }
     }
+
+    /* Aviso de suspensiones */
+    .repetido { margin-top: 12px; display: inline-block; background: var(--rojo-suave); color: #8d1f26; border: 1px solid #e6c9c2; border-radius: 8px; padding: 5px 12px; font-size: 0.875rem; font-weight: 700; }
+    .baneo { margin-top: 38px; background: #fff; border: 1px solid var(--line); border-left: 5px solid var(--rojo); border-radius: var(--radius); padding: 28px 28px 24px; box-shadow: var(--sombra); }
+    .baneo > h3 { font-family: Georgia, serif; font-size: 1.5rem; }
+    .baneo-intro { margin-top: 10px; font-size: 1.0625rem; color: var(--ink); max-width: 52rem; }
+    .banderas { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 20px; }
+    .bandera { border-radius: 12px; padding: 18px 20px; }
+    .bandera.roja { background: var(--rojo-suave); border: 1px solid #e6c9c2; }
+    .bandera.verde { background: #e4f3e8; border: 1px solid #bcdcc6; }
+    .bandera h4 { font-size: 1.03125rem; margin-bottom: 8px; }
+    .bandera.roja h4 { color: #8d1f26; }
+    .bandera.verde h4 { color: var(--panel-verde); }
+    .bandera ul { margin-left: 20px; font-size: 1rem; }
+    .bandera li { margin-bottom: 7px; }
+    .baneo-pie { margin-top: 20px; padding-top: 16px; border-top: 1px dashed var(--line); font-size: 1rem; color: var(--muted); }
+    .baneo-pie strong { color: var(--ink); }
+    .nota-paso { margin-top: 10px; padding: 12px 14px; background: var(--rojo-suave); border: 1px solid #e6c9c2; border-radius: 10px; font-size: 1rem; }
+    .nota-paso a { color: var(--verde); font-weight: 700; }
+    .baneo-pie + .baneo-pie { margin-top: 12px; padding-top: 12px; }
+    @media (max-width: 660px) { .banderas { grid-template-columns: 1fr; } .baneo { padding: 22px 18px; } }
+
+    /* ═════ MEJORAS VISUALES ═════ */
+    @keyframes aparecer { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    .tab-panel:not(.oculto) { animation: aparecer .28s ease; }
+
+    /* Controles de lectura y progreso */
+    .controles { display: flex; gap: 6px; margin-left: auto; }
+    .controles button { min-height: 40px; min-width: 44px; padding: 0 10px; border: 1.5px solid var(--verde); background: #fff; color: var(--verde); border-radius: 8px; font: inherit; font-size: 0.90625rem; font-weight: 700; cursor: pointer; }
+    .controles button:hover:not(:disabled), .controles button[aria-pressed="true"] { background: var(--verde); color: #fff; }
+    .controles button:disabled { opacity: .4; cursor: not-allowed; }
+    .nav-cta { margin-left: 0; }
+    .progreso { height: 3px; background: var(--line); }
+    .progreso span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--verde), var(--rojo)); transition: width .3s; }
+
+    /* Iconos */
+    .i { width: 26px; height: 26px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+    .ico { width: 48px; height: 48px; border-radius: 12px; background: var(--verde-suave); color: var(--verde); display: grid; place-items: center; margin-bottom: 12px; }
+    .fuente .ico { margin-bottom: 6px; }
+    .fuente.local .ico { background: #fff; }
+    .regla .n { width: 42px; height: 42px; border-radius: 10px; background: rgba(255,255,255,.12); color: #f3c9c2; display: grid; place-items: center; }
+
+    /* Resumen «En una frase» */
+    .resumen { margin-top: 22px; display: flex; gap: 14px; align-items: baseline; background: #fff; border: 1px solid var(--line); border-left: 5px solid var(--verde); border-radius: 0 12px 12px 0; padding: 12px 18px; font-size: 1.0625rem; max-width: 46rem; }
+    .resumen b { flex: none; font-size: 0.78125rem; letter-spacing: 1.4px; text-transform: uppercase; color: var(--verde); }
+    .resumen.oscuro { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.2); border-left-color: var(--rojo-brill); color: var(--card-ink); }
+    .resumen.oscuro b { color: #f3c9c2; }
+
+    /* Inicio con ilustración */
+    .hero-visual { position: relative; }
+    .hero-img { margin: 0; }
+    .hero-img img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 22px 44px rgba(14, 77, 43, .22); }
+    .hero-visual .hero-card { position: relative; margin: -56px 20px 0; padding: 22px 24px; }
+    .hero-visual .hero-card h2 { font-size: 1.375rem; }
+
+    /* Esquema interactivo */
+    .ver-anillo { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-align: left; cursor: pointer; }
+    .ver-anillo::after { content: ' ›'; color: var(--rojo); font-weight: 700; }
+    .ver-anillo:hover { color: var(--verde); text-decoration: underline; }
+    .escalera li.sel .nivel { box-shadow: 0 0 0 4px var(--verde-suave); }
+    .escalera li.cercano.sel .nivel { box-shadow: 0 0 0 4px var(--rojo-suave); }
+    .anillo.a0 { border-color: rgba(255,255,255,.2); background: rgba(255,255,255,.03); }
+    .anillo { transition: background .2s, box-shadow .2s, border-color .2s; }
+    .anillo.sel { border-color: #fff; background: rgba(255,255,255,.2); box-shadow: 0 0 0 3px rgba(255,255,255,.45); }
+    .anillo.a4.sel { background: #e0434b; }
+
+    /* Maqueta de teléfono */
+    .pasos-layout { display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: 32px; align-items: start; }
+    .telefono-col { position: sticky; top: 150px; }
+    .telefono { width: 270px; margin: 0 auto; background: #1c1816; border-radius: 34px; padding: 12px; box-shadow: 0 24px 46px rgba(35, 31, 28, .25); }
+    .tel-notch { width: 80px; height: 8px; border-radius: 6px; background: #3a3430; margin: 4px auto 10px; }
+    .tel-pantalla { background: #fff; border-radius: 24px; padding: 18px 14px 14px; display: grid; gap: 14px; }
+    .tel-bloque { position: relative; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+    .marca { position: absolute; top: -10px; right: -6px; width: 24px; height: 24px; border-radius: 50%; background: var(--rojo); color: #fff; font-style: normal; font-weight: 700; font-size: 0.8125rem; display: grid; place-items: center; }
+    .tel-tit { font-size: 0.75rem; font-weight: 700; color: var(--verde); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+    .tel-sigue { list-style: none; font-size: 0.90625rem; }
+    .tel-sigue li { display: flex; justify-content: space-between; gap: 8px; padding: 5px 0; border-bottom: 1px solid var(--line); }
+    .tel-sigue li:last-child { border: 0; }
+    .tel-sigue em { font-style: normal; color: var(--verde); font-size: 0.75rem; font-weight: 700; }
+    .tel-post { font-size: 0.90625rem; line-height: 1.5; }
+    .telefono-col .ficticio { text-align: center; }
+
+    /* Imprimir */
+    .imprimir { min-height: 44px; display: inline-flex; align-items: center; gap: 8px; background: none; border: 0; color: var(--verde); font: inherit; font-size: 1rem; font-weight: 700; cursor: pointer; }
+    .imprimir .i { width: 20px; height: 20px; }
+    .imprimir:hover { color: var(--rojo); }
+    .solo-imprimir { display: none; }
+
+    /* Tamaño de letra y contraste (preferencias del lector) */
+    html[data-tam="1"] { font-size: 112.5%; }
+    html[data-tam="2"] { font-size: 125%; }
+    html[data-tam="3"] { font-size: 137.5%; }
+    html[data-contraste="alto"] { --paper: #fff; --ink: #000; --muted: #1f1a17; --soft: #ececec; --line: #8a817a; --verde: #0a3d22; --verde-osc: #08210f; --panel-verde: #0c3a23; --rojo: #9d121a; --card-muted: #fff; --verde-suave: #cfdccf; --rojo-suave: #f6dcd6; }
+    html[data-contraste="alto"] :is(.war-card, .fuente, .rol, .paso, .post, .principle, .faq-list details, .atajo, .baneo, .resumen, .term) { border-color: #2b2522; }
+    html[data-contraste="alto"] .tab { color: #000; }
+    html[data-contraste="alto"] .tab.activo { outline: 2px solid #000; }
+
+    @media (max-width: 960px) {
+      .pasos-layout { grid-template-columns: 1fr; }
+      .telefono-col { position: static; }
+      .hero-visual .hero-card { margin: -40px 14px 0; }
+    }
+    @media (max-width: 660px) {
+      .resumen { flex-direction: column; gap: 4px; }
+      .controles { gap: 4px; }
+      .controles button { min-width: 40px; padding: 0 8px; font-size: 0.84375rem; }
+      .brand-sub { display: none; }
+      .nav { gap: 10px; }
+    }
+    @media (max-width: 380px) { .controles button#btn-contraste { font-size: 0.75rem; padding: 0 6px; } .brand-name { font-size: 1.0625rem; } }
+
+    @media print {
+      @page { margin: 16mm; }
+      * { background: transparent !important; color: #000 !important; box-shadow: none !important; animation: none !important; }
+      header, .recorrido-inicio, .recorrido-fin, footer, .salto, .topline, .progreso, .controles { display: none !important; }
+      .solo-imprimir { display: block; font-weight: 700; border-bottom: 2px solid #000; padding-bottom: 6px; margin-bottom: 14px; font-size: 11pt; }
+      body { font-size: 12pt; line-height: 1.5; }
+      section.tab-panel, .hero { padding: 0 0 14px; }
+      .wrap { max-width: none; padding: 0; }
+      :is(.war-card, .fuente, .rol, .paso, .post, .baneo, .registro-panel, .poster-panel, .panel-verde, .regla, .resumen, .principle, .tel-bloque, .atajo) { border: 1px solid #000 !important; break-inside: avoid; }
+      .telefono { border: 1px solid #000; }
+      .telefono-col { position: static; }
+      .tab-panel.atajos, .cierre { display: none !important; }
+      a { text-decoration: none; }
+      details > * { display: block; }
+    }
   </style>
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-ley" viewBox="0 0 24 24"><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v4h4M10 12h6M10 16h6"/></symbol>
+      <symbol id="i-pueblo" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 5.5a3 3 0 010 5.6M18 14.5c1.9.8 3 2.7 3 5.5"/></symbol>
+      <symbol id="i-senal" viewBox="0 0 24 24"><path d="M4 9v6h3l6 4V5L7 9z"/><path d="M16 9a4 4 0 010 6"/></symbol>
+      <symbol id="i-periodico" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h8M8 16h5"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+      <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></symbol>
+      <symbol id="i-lupa" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M16 16l4 4"/></symbol>
+      <symbol id="i-ojo" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+      <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+      <symbol id="i-datos" viewBox="0 0 24 24"><path d="M4 20V11M10 20V4M16 20v-8M2 20h20"/></symbol>
+      <symbol id="i-bandera" viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></symbol>
+      <symbol id="i-candado" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></symbol>
+      <symbol id="i-impresora" viewBox="0 0 24 24"><path d="M7 9V3h10v6M7 17H5a2 2 0 01-2-2v-4a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2h-2"/><rect x="7" y="14" width="10" height="7"/></symbol>
+    </defs>
+  </svg>
   <a class="salto" href="#contenido">Saltar al contenido</a>
   <div class="topline" aria-hidden="true"></div>
 
@@ -366,6 +510,11 @@
         <span class="brand-mark" aria-hidden="true"></span>
         <span><span class="brand-name">X Tunas</span><span class="brand-sub">Región Militar Las Tunas</span></span>
       </a>
+      <div class="controles" role="group" aria-label="Opciones de lectura">
+        <button type="button" id="btn-menos" aria-label="Reducir el tamaño de la letra">A−</button>
+        <button type="button" id="btn-mas" aria-label="Aumentar el tamaño de la letra">A+</button>
+        <button type="button" id="btn-contraste" aria-pressed="false">Contraste</button>
+      </div>
       <a class="nav-cta" href="#registro-tab">Apúntate a la trinchera <span aria-hidden="true">↗</span></a>
     </div>
     <nav class="menu" id="tabbar" aria-label="Secciones del portal">
@@ -381,9 +530,11 @@
         <a class="tab" href="#preguntas-tab" data-tab="preguntas">Preguntas</a>
       </div>
     </nav>
+    <div class="progreso" aria-hidden="true"><span id="progreso-barra"></span></div>
   </header>
 
   <main id="contenido">
+    <div class="solo-imprimir">X Tunas · Región Militar Las Tunas — Portal de preparación para la defensa</div>
     <nav class="recorrido-inicio wrap" id="recorrido-inicio" aria-label="Regresar a la sección anterior" hidden>
       <button class="volver-seccion" id="volver-seccion" type="button"><span aria-hidden="true">←</span> <span id="volver-texto">Volver</span></button>
     </nav>
@@ -394,13 +545,15 @@
         <div>
           <div class="eyebrow">Las Tunas · Región Militar · Guerra de todo el pueblo</div>
           <h1>Las redes también<br><em>son trinchera.</em></h1>
-          <p class="lead">La batalla de hoy no se libra solo en el territorio: se libra en cada publicación, en cada comentario, en cada hashtag. Este portal reúne la doctrina, la estructura de la Región Militar de Las Tunas y un manual práctico para combatir con criterio, con datos y con la verdad delante.</p>
+          <p class="lead">La batalla de hoy no se libra solo en el territorio: se libra en cada publicación, en cada comentario, en cada etiqueta. Este portal reúne la doctrina, la estructura de la Región Militar de Las Tunas y un manual práctico para combatir con criterio, con datos y con la verdad delante.</p>
           <p class="para-quien"><strong>Pensado para</strong> oficiales, soldados y trabajadores civiles de las unidades de la Región Militar Las Tunas.</p>
           <div class="hero-actions">
             <a class="button" href="#plataformas-tab">Entrar a la batalla <span aria-hidden="true">→</span></a>
             <a class="button-secondary" href="#guerra-tab">Entender la doctrina <span aria-hidden="true">↓</span></a>
           </div>
         </div>
+        <div class="hero-visual">
+        <figure class="hero-img"><img src="img/ciberdefensa.jpg" width="1400" height="1400" alt="Ilustración conceptual del frente digital: soldados cubanos en un centro de ciberdefensa, con el mapa de Cuba y la bandera nacional." fetchpriority="high"></figure>
         <article class="hero-card">
           <div class="hc-top"><span>Manual del frente digital</span><span>01</span></div>
           <h2>Antes de publicar, entiende el terreno.</h2>
@@ -408,6 +561,7 @@
           <div class="tags"><span class="tag">Vigilar</span><span class="tag">Verificar</span><span class="tag">Combatir</span></div>
           <div class="hc-foot">Guerra de todo el pueblo, también en el ciberespacio</div>
         </article>
+        </div>
       </div>
     </section>
 
@@ -439,7 +593,7 @@
           <p>Aquí no se viene a discutir si la Revolución tiene o no razones: se viene a conocerlas, defenderlas y explicarlas. La propuesta visual mantiene una identidad sobria y no utiliza insignias ni emblemas; cualquier atribución institucional, logos y contenidos oficiales se integrarán tras confirmación.</p>
         </div>
         <div class="principle-list">
-          <div class="principle"><span class="principle-index">01</span><div><h3>Explicar sin paternalizar</h3><p>Cada término (MTT, BPD, Zona de Defensa, hashtag, réplica) se explica a la primera: nadie combate con palabras que no entiende.</p></div></div>
+          <div class="principle"><span class="principle-index">01</span><div><h3>Explicar sin paternalizar</h3><p>Cada término (MTT, BPD, Zona de Defensa, etiqueta, réplica) se explica a la primera: nadie combate con palabras que no entiende.</p></div></div>
           <div class="principle"><span class="principle-index">02</span><div><h3>Fuentes oficiales siempre</h3><p>La base de todo lo que aquí se comparte es la información oficial cubana y la prensa nacional y territorial.</p></div></div>
           <div class="principle"><span class="principle-index">03</span><div><h3>Aprender por etapas, actuar desde hoy</h3><p>De la doctrina al manual: entender las reglas del terreno, las plataformas y luego entrar a combatir con criterio.</p></div></div>
           <div class="principle"><span class="principle-index">04</span><div><h3>Privacidad por diseño</h3><p>La ficha de registro se genera y vive en tu dispositivo: la página no la envía ni la almacena. El envío lo hace cada quien por su canal, y sin datos no hay riesgo de datos.</p></div></div>
@@ -464,20 +618,24 @@
           <div class="kicker">01 / La doctrina</div>
           <h2>La guerra de todo el pueblo también se libra con un teléfono en la mano.</h2>
           <p class="lead">En Cuba, la defensa no es tarea de unos pocos: es un derecho y un deber de todo el pueblo, organizado desde el territorio. El enemigo lo sabe, y por eso su ofensiva principal hoy es mediática y cultural: mentir, confundir y desmoralizar desde el mismo teléfono donde escuchas música.</p>
+          <p class="resumen"><b>En una frase</b>La defensa es asunto de todo el pueblo y hoy también se libra en las redes: la respuesta es el criterio, no el silencio.</p>
         </div>
         <p class="war-lead">Cuando el enemigo no logra vencer en el terreno, intenta vencer en la mente: fabrica tendencias, invierte el orden de los hechos, sataniza y espera que el cansancio haga el resto. Comprender el marco donde actuamos es el primer paso para responder sin caer en la trampa.</p>
         <div class="war-grid">
           <article class="war-card">
+            <span class="ico" aria-hidden="true"><svg class="i"><use href="#i-ley"/></svg></span>
             <div class="war-kicker">El marco legal</div>
             <h3>Ley No. 75 de la Defensa Nacional (1994)</h3>
             <p>Organiza el sistema defensivo cubano de punta a punta: dirección, Regiones Militares, Zonas de Defensa y las estructuras territoriales. La defensa es asunto de todo el pueblo; ese principio no es poesía, es ley.</p>
           </article>
           <article class="war-card">
+            <span class="ico" aria-hidden="true"><svg class="i"><use href="#i-pueblo"/></svg></span>
             <div class="war-kicker">La forma de actuar</div>
             <h3>Guerra de todo el pueblo</h3>
             <p>No se depende solo del ejército regular: cada provincia, municipio y zona organiza su propia defensa. Todo el mundo tiene un lugar; hoy, para muchos, ese lugar está también frente al teclado.</p>
           </article>
           <article class="war-card">
+            <span class="ico" aria-hidden="true"><svg class="i"><use href="#i-senal"/></svg></span>
             <div class="war-kicker">El terreno actual</div>
             <h3>La guerra mediática y cultural</h3>
             <p>El enemigo principal no bombardea la isla: bombardea la conversación. Fabrica noticias, amplifica frustraciones reales y busca desánimo y confrontación. La respuesta no es el silencio, es el criterio.</p>
@@ -508,18 +666,19 @@
           <div class="kicker">02 / La estructura</div>
           <h2>De la Región Militar a tu barrio: así se organiza la defensa.</h2>
           <p class="lead">La Región Militar de Las Tunas integra la defensa de la provincia dentro del Ejército Oriental. Estas son las piezas del sistema territorial, de lo operativo a lo vecinal.</p>
+          <p class="resumen"><b>En una frase</b>La defensa se organiza por niveles, del Ejército Oriental hasta tu centro de trabajo y tu barrio. Toca un nivel para verlo en el esquema.</p>
         </div>
 
-        <div class="diagrama">
+        <div class="diagrama" id="diagrama">
           <div>
             <div class="escalera-eje"><span>Más amplio</span><span>Más cercano</span></div>
             <ol class="escalera">
-              <li><span class="nivel">1</span><h3>Ejército Oriental</h3><p>Gran unidad militar de la zona oriental del país; la Región Militar de Las Tunas se integra a su área de responsabilidad.</p></li>
-              <li><span class="nivel">2</span><h3>Regiones Militares</h3><p>Órganos de dirección de lo operativo en grandes porciones del territorio. Las Tunas la tiene propia y con historia: la defensa se prepara desde el territorio.</p></li>
-              <li><span class="nivel">3</span><h3>Consejos de Defensa</h3><p>Dirigen en cada nivel: provinciales, municipales y de Zona. Unen dirección política, economía y defensa en el territorio que les toca.</p></li>
-              <li class="cercano"><span class="nivel">4</span><h3>Zonas de Defensa</h3><p>El eslabón más cercano a la gente: cada sector de barrios y asentamientos tiene su Consejo, que organiza la respuesta en el lugar donde vivimos.</p></li>
-              <li class="cercano"><span class="nivel">5</span><h3>MTT — Milicias de Tropas Territoriales</h3><p>Ciudadanos que se preparan y se organizan para integrar la defensa de su zona y su centro de trabajo: es la participación popular armada y organizada.</p></li>
-              <li class="cercano"><span class="nivel">6</span><h3>BPD — Brigadas de Producción y Defensa</h3><p>Estructuras por centros de trabajo y zonas residenciales: producen y a la vez se preparan para la defensa del territorio donde están.</p></li>
+              <li><span class="nivel">1</span><h3><button type="button" class="ver-anillo" data-anillo="a0">Ejército Oriental</button></h3><p>Gran unidad militar de la zona oriental del país; la Región Militar de Las Tunas se integra a su área de responsabilidad.</p></li>
+              <li><span class="nivel">2</span><h3><button type="button" class="ver-anillo" data-anillo="a1">Regiones Militares</button></h3><p>Órganos de dirección de lo operativo en grandes porciones del territorio. Las Tunas la tiene propia y con historia: la defensa se prepara desde el territorio.</p></li>
+              <li><span class="nivel">3</span><h3><button type="button" class="ver-anillo" data-anillo="a2">Consejos de Defensa</button></h3><p>Dirigen en cada nivel: provinciales, municipales y de Zona. Unen dirección política, economía y defensa en el territorio que les toca.</p></li>
+              <li class="cercano"><span class="nivel">4</span><h3><button type="button" class="ver-anillo" data-anillo="a3">Zonas de Defensa</button></h3><p>El eslabón más cercano a la gente: cada sector de barrios y asentamientos tiene su Consejo, que organiza la respuesta en el lugar donde vivimos.</p></li>
+              <li class="cercano"><span class="nivel">5</span><h3><button type="button" class="ver-anillo" data-anillo="a4">MTT — Milicias de Tropas Territoriales</button></h3><p>Ciudadanos que se preparan y se organizan para integrar la defensa de su zona y su centro de trabajo: es la participación popular armada y organizada.</p></li>
+              <li class="cercano"><span class="nivel">6</span><h3><button type="button" class="ver-anillo" data-anillo="a4">BPD — Brigadas de Producción y Defensa</button></h3><p>Estructuras por centros de trabajo y zonas residenciales: producen y a la vez se preparan para la defensa del territorio donde están.</p></li>
             </ol>
           </div>
 
@@ -527,12 +686,14 @@
             <h3>El esquema, de un vistazo</h3>
             <p>Cada nivel está dentro del anterior: lo grande protege lo cercano, y lo cercano sostiene a lo grande.</p>
             <div class="anillos" role="img" aria-label="Esquema anidado: Región Militar Las Tunas contiene al Consejo de Defensa, que contiene a la Zona de Defensa, que contiene a las MTT y BPD de tu centro de trabajo.">
+              <div class="anillo a0"><span>Ejército Oriental</span>
               <div class="anillo a1"><span>Región Militar Las Tunas</span>
                 <div class="anillo a2"><span>Consejo de Defensa</span>
                   <div class="anillo a3"><span>Zona de Defensa</span>
                     <div class="anillo a4"><span>MTT · BPD<br><small>tu centro de trabajo</small></span></div>
                   </div>
                 </div>
+              </div>
               </div>
             </div>
           </aside>
@@ -549,6 +710,7 @@
           <div class="kicker">03 / Tu lugar</div>
           <h2>Cada quien aporta desde donde está.</h2>
           <p class="lead">En una unidad hay oficiales, soldados y trabajadores civiles. Todos son parte de la defensa y todos pueden aportar, cada uno a su manera.</p>
+          <p class="resumen"><b>En una frase</b>Oficiales, soldados y trabajadores civiles: todos tienen un papel, siempre dentro de las normas de la unidad.</p>
         </div>
 
         <div class="roles">
@@ -586,7 +748,7 @@
 
         <div class="aviso" role="note">
           <span class="ic" aria-hidden="true">!</span>
-          <p><strong>Importante:</strong> el uso de teléfonos y redes dentro de la unidad lo regula cada mando. Sigue siempre las indicaciones de tu jefe y nunca publiques información sobre posiciones, horarios, personal o actividades internas de la unidad.</p>
+          <p><strong>Importante:</strong> el uso de teléfonos y redes dentro de la unidad lo regula cada mando. Sigue siempre las indicaciones de tu jefe inmediato y respeta el secreto militar y estatal: no publiques información de carácter militar ni asuntos internos de la unidad (posiciones, horarios, personal o actividades).</p>
         </div>
       </div>
     </section>
@@ -598,7 +760,9 @@
           <div class="kicker">04 / Primeros pasos</div>
           <h2>Un ciudadano sin cuenta no puede combatir: crea la tuya hoy.</h2>
           <p class="lead">Muchos quieren defender y no saben por dónde empezar. Aquí está el camino completo, en tres pasos y en lenguaje de gente corriente.</p>
+          <p class="resumen"><b>En una frase</b>Tres pasos: crea tu cuenta, sigue a los medios oficiales y publica con tus propias palabras.</p>
         </div>
+        <div class="pasos-layout">
         <div class="pasos">
           <article class="paso">
             <div>
@@ -612,6 +776,7 @@
                   <li>Regístrate con un correo nuevo o propio; elige un nombre de usuario serio y reconocible.</li>
                   <li>Contraseña única, que no uses en ningún otro servicio, y guárdala tú solo. Ningún compañero te pedirá tu contraseña: quien lo haga, no es compañero.</li>
                 </ol>
+                <p class="nota-paso"><strong>Si X no acepta tu número +53:</strong> regístrate con tu correo electrónico, una vía que X documenta en su <a href="https://help.x.com/es/using-twitter/create-twitter-account" target="_blank" rel="noopener noreferrer">Centro de ayuda</a>. Hemos detectado dificultades para crear cuentas en nuestro país en distintos momentos.</p>
               </details>
             </div>
           </article>
@@ -638,48 +803,106 @@
               <details class="pasos-details">
                 <summary>Ver los pasos</summary>
                 <ol>
-                  <li>Busca el hashtag de la jornada o tema del día; fíjate qué están publicando los medios oficiales sobre él.</li>
+                  <li>Busca la etiqueta (hashtag) de la jornada o el tema del día; fíjate qué están publicando los medios oficiales sobre él.</li>
                   <li>Toma el dato directamente del medio oficial y escribe tu comentario con tus palabras: claro, firme y sin insultos.</li>
-                  <li>Repostea la publicación oficial y responde a quien difunda mentiras con el enlace del medio original. Esa es la estructura de una intervención limpia.</li>
+                  <li>Comparte (repostea) la publicación oficial y responde a quien difunda mentiras con el enlace del medio original. Esa es la estructura de una intervención limpia.</li>
                 </ol>
               </details>
             </div>
           </article>
         </div>
+        <aside class="telefono-col" aria-label="Maqueta ilustrativa de una cuenta lista">
+          <div class="telefono" role="img" aria-label="Maqueta de un perfil de X: nombre de la persona, tres medios oficiales seguidos y una publicación propia.">
+            <div class="tel-notch"></div>
+            <div class="tel-pantalla">
+              <div class="tel-bloque"><i class="marca">1</i>
+                <div class="post-cab"><span class="avatar">MR</span><div><b>María R.</b><span>@maria_tunas · Las Tunas</span></div></div>
+              </div>
+              <div class="tel-bloque"><i class="marca">2</i>
+                <p class="tel-tit">Siguiendo</p>
+                <ul class="tel-sigue">
+                  <li>Periódico 26 <em>✓ Siguiendo</em></li>
+                  <li>Granma <em>✓ Siguiendo</em></li>
+                  <li>Cubadebate <em>✓ Siguiendo</em></li>
+                </ul>
+              </div>
+              <div class="tel-bloque"><i class="marca">3</i>
+                <p class="tel-tit">Tu primera publicación</p>
+                <p class="tel-post">¡Viva la defensa de la Patria! …</p>
+              </div>
+            </div>
+          </div>
+          <p class="ficticio">Maqueta ilustrativa: así queda una cuenta lista tras los tres pasos.</p>
+        </aside>
+        </div>
 
         <div class="ejemplo-bloque">
-          <h3>Ejemplo visual: una intervención limpia</h3>
-          <p>Así se ve, en una publicación de X, la diferencia entre aportar y simplemente gritar.</p>
+          <h3>Ejemplo visual: una publicación que suma</h3>
+          <p>Las dos publicaciones usan la misma consigna. La diferencia está en cómo se acompaña: una suma y se nota que es una persona real; la otra parece un robot. Las consignas son importantes, pero valen más cuando llevan un dato detrás.</p>
           <div class="comparar">
             <div class="caso bien">
               <span class="etiqueta">✓ Así sí</span>
               <div class="post">
                 <div class="post-cab"><span class="avatar" aria-hidden="true">MR</span><div><b>María R. · Las Tunas</b><span>@maria_tunas</span></div></div>
-                <p class="post-texto">Según el parte oficial de hoy, el servicio se restablece en la tarde. Dejo el enlace al medio original para quien quiera comprobarlo. <span class="hash">#LasTunas</span></p>
-                <div class="post-cita"><b>Medio oficial</b> · Publicación original con el dato y la fecha</div>
-                <div class="post-pie"><span>Responder</span><span>Repostear</span><span>Guardar</span></div>
+                <p class="post-texto">¡Viva la defensa de la Patria! La Ley 75 de la Defensa Nacional lo dice claro: la defensa se realiza mediante la guerra de todo el pueblo. En Las Tunas eso significa que cada zona, cada centro de trabajo y cada persona tiene su lugar. ¡Venceremos! <span class="hash">#CubaEstaFirme #ConElPieEnElEstribo</span></p>
+                <div class="post-cita"><b>Ley No. 75 de la Defensa Nacional (1994)</b> · Gaceta Oficial de la República de Cuba</div>
+                <div class="post-pie"><span>Responder</span><span>Compartir</span><span>Guardar</span></div>
               </div>
               <ul>
-                <li>Cita la fuente oficial y deja el enlace.</li>
-                <li>Da un dato concreto, sin adjetivos de más.</li>
-                <li>Nombre real y reconocible.</li>
+                <li><strong>Mantiene la consigna</strong> y la respalda con una idea propia.</li>
+                <li>Cita un dato real y concreto (la Ley 75) que cualquiera puede comprobar.</li>
+                <li>Dos etiquetas, ambas relacionadas con el tema.</li>
+                <li>Nombre real, sin insultos y a ritmo humano.</li>
               </ul>
             </div>
             <div class="caso mal">
               <span class="etiqueta">✗ Así no</span>
               <div class="post">
                 <div class="post-cab"><span class="avatar" aria-hidden="true">?</span><div><b>usuario8841</b><span>@usuario8841</span></div></div>
-                <p class="post-texto">¡¡Todo lo que dicen es MENTIRA!! Son unos vendidos y quien no lo vea es tonto!!! <span class="hash">#TodosAPublicar</span></p>
-                <div class="post-pie"><span>Responder</span><span>Repostear</span><span>Guardar</span></div>
+                <p class="post-texto">¡¡VIVA LA DEFENSA DE LA PATRIA!! ¡¡VENCEREMOS!! ¡¡COMPARTE YA si eres cubano de verdad!! <span class="hash">#CubaEstaFirme #ConElPieEnElEstribo #LasTunas #Cuba #Patria #Defensa #Venceremos #Revolución</span> @cuenta1 @cuenta2 @cuenta3</p>
+                <div class="repetido">⚠ Mismo texto publicado 40 veces en una hora</div>
+                <div class="post-pie"><span>Responder</span><span>Compartir</span><span>Guardar</span></div>
               </div>
               <ul>
-                <li>No tiene fuente ni dato verificable.</li>
-                <li>Insulta: no convence a nadie.</li>
-                <li>Cuenta anónima, sin credibilidad.</li>
+                <li>La consigna sola, sin dato ni fuente, repetida en masa.</li>
+                <li>Muchas etiquetas y menciones para «llenar».</li>
+                <li>Presiona con «comparte ya» en lugar de convencer con un dato.</li>
+                <li>Cuenta anónima y a un ritmo imposible para una persona.</li>
               </ul>
             </div>
           </div>
           <p class="ficticio">Ejemplo ilustrativo con cuentas y texto inventados; no representa a ninguna persona real.</p>
+
+          <div class="baneo" role="note">
+            <h3>¿Por qué X puede suspender una cuenta?</h3>
+            <p class="baneo-intro"><strong>Una suspensión es un riesgo real para cualquier cuenta.</strong> Según las propias reglas de X («manipulación de plataforma y spam»), lo que se vigila es el <em>comportamiento</em>: cuentas que parezcan automáticas (bots) o actividad coordinada para inflar un tema. Sus sistemas son automáticos y pueden equivocarse, así que conviene dejar poco margen: una cuenta real puede caer por actuar como si fuera un bot.</p>
+            <div class="banderas">
+              <div class="bandera roja">
+                <h4>Lo que activa las alarmas</h4>
+                <ul>
+                  <li>Publicar o responder <strong>el mismo texto</strong> muchas veces, o que muchas cuentas publiquen el mismo mensaje.</li>
+                  <li>Seguir, compartir o dar «me gusta» <strong>a gran velocidad</strong> o en masa.</li>
+                  <li>Llenar las publicaciones de etiquetas o menciones que no vienen al caso.</li>
+                  <li>Usar programas o apps para publicar automáticamente.</li>
+                  <li>Manejar varias cuentas para aparentar más apoyo.</li>
+                  <li>Insultar, acosar o hacerse pasar por otra persona.</li>
+                </ul>
+              </div>
+              <div class="bandera verde">
+                <h4>Lo que te protege</h4>
+                <ul>
+                  <li>Escribir <strong>con tus palabras</strong>, aunque el dato venga de un medio oficial.</li>
+                  <li>Una sola cuenta, con tu nombre real.</li>
+                  <li>Un ritmo de persona: pocas publicaciones al día, no cientos en minutos.</li>
+                  <li>Compartir con moderación y aportar algo en cada comentario.</li>
+                  <li>No copiar y pegar mensajes que te manden «para publicar».</li>
+                </ul>
+              </div>
+            </div>
+            <p class="baneo-pie"><strong>Ten presente:</strong> en nuestro país hemos detectado bloqueos de cuentas y dificultades para registrarlas en distintos momentos. Por eso conviene cuidar el comportamiento de tu cuenta y conservar capturas y fechas si algo ocurre.</p>
+            <p class="baneo-pie"><strong>Si te suspenden:</strong> X puede equivocarse, porque sus sistemas son automáticos. Pide la revisión desde el aviso de la propia cuenta y no abras otra para saltarte la suspensión: eso también rompe las reglas y empeora el caso. Las reglas cambian, así que revisa de vez en cuando las Reglas de X en su Centro de ayuda.</p>
+          </div>
+        </div>
         </div>
       </div>
     </section>
@@ -691,40 +914,47 @@
           <div class="kicker">05 / Plataformas de la batalla</div>
           <h2>Un mismo mensaje, cinco trincheras.</h2>
           <p class="lead">El contenido oficial cubano se publica primero en sus medios, y desde ahí se replica. Estas son las puertas de entrada del cibercombatiente: entra, verifica y comunica.</p>
+          <p class="resumen"><b>En una frase</b>La información sale primero de los medios oficiales: tú la verificas y la compartes.</p>
         </div>
-        <p class="war-lead">El cibercombatiente no improvisa fuentes: la base es la información oficial. Cada trinchera tiene su trabajo: en X, el repost para arrancar la noticia del momento y la respuesta para refutar; en Facebook y YouTube, el debate más pausado y el material para estudiar; en la web y los periódicos, el dato que se verifica antes de salir a combatir.</p>
+        <p class="war-lead">El cibercombatiente no improvisa fuentes: la base es la información oficial. Cada trinchera tiene su trabajo: en X, compartir (repost) para arrancar la noticia del momento y la respuesta para refutar; en Facebook y YouTube, el debate más pausado y el material para estudiar; en la web y los periódicos, el dato que se verifica antes de salir a combatir.</p>
         <div class="fuentes">
           <a class="fuente local" href="https://periodico26.cu" target="_blank" rel="noopener noreferrer">
+            <span class="ico" aria-hidden="true"><svg class="i"><use href="#i-periodico"/></svg></span>
             <span class="tipo">Nuestro territorio</span>
             <h3>Periódico 26 (Las Tunas)</h3>
             <p>La voz periodística de Las Tunas: cobertura local, cultura y defensa, con presencia activa en X.</p>
             <span class="ir">periodico26.cu →</span>
           </a>
           <a class="fuente" href="https://x.com" target="_blank" rel="noopener noreferrer">
+            <span class="ico" aria-hidden="true"><svg class="i"><use href="#i-chat"/></svg></span>
             <span class="tipo">Trinchera principal</span>
             <h3>X (antes Twitter)</h3>
-            <p>Donde se gana o se pierde la conversación: hashtags, réplica en tiempo real, debate directo con quien miente.</p>
+            <p>Donde se gana o se pierde la conversación: etiquetas, réplica en tiempo real, debate directo con quien miente.</p>
             <span class="ir">x.com →</span>
           </a>
           <a class="fuente" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <span class="ico" aria-hidden="true"><svg class="i"><use href="#i-pueblo"/></svg></span>
             <span class="tipo">Trinchera comunitaria</span>
             <h3>Facebook</h3>
             <p>Grupos, páginas de barrio, avisos y comentarios: el terreno donde más gente cubana conversa a diario.</p>
             <span class="ir">facebook.com →</span>
           </a>
           <a class="fuente" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+            <span class="ico" aria-hidden="true"><svg class="i"><use href="#i-video"/></svg></span>
             <span class="tipo">Trinchera testimonial</span>
             <h3>YouTube</h3>
             <p>Documentos, transmisiones y la palabra directa de las instituciones: material para estudiar y compartir.</p>
             <span class="ir">youtube.com →</span>
           </a>
           <a class="fuente" href="https://www.cubadebate.cu" target="_blank" rel="noopener noreferrer">
+            <span class="ico" aria-hidden="true"><svg class="i"><use href="#i-lupa"/></svg></span>
             <span class="tipo">Fuente base</span>
             <h3>Cubadebate</h3>
-            <p>Contraincendio de la guerra mediática cubana: análisis, desmentidos y el otro lado de cada noticia.</p>
+            <p>Medio de referencia para el análisis y el desmentido frente a la guerra mediática: el dato verificado y el contexto de cada noticia.</p>
             <span class="ir">cubadebate.cu →</span>
           </a>
           <a class="fuente" href="https://www.granma.cu" target="_blank" rel="noopener noreferrer">
+            <span class="ico" aria-hidden="true"><svg class="i"><use href="#i-periodico"/></svg></span>
             <span class="tipo">Órgano oficial</span>
             <h3>Granma</h3>
             <p>Diario del Comité Central del Partido: información y líneas editoriales del país, con versión digital y cuenta en X.</p>
@@ -741,14 +971,15 @@
         <div class="panel-verde grande">
           <div class="kicker claro">06 / Manual del cibercombatiente</div>
           <h2>No basta con indignarse: hay que saber combatir.</h2>
-          <p class="lead claro">Un militante preparado no es el que grita más fuerte, sino el que convence. Estas son las reglas básicas del frente digital, con la disciplina de quien lleva años en X.</p>
+          <p class="lead claro">Un combatiente preparado no es el que grita más fuerte, sino el que convence. Estas son las reglas básicas del frente digital.</p>
+          <p class="resumen oscuro"><b>En una frase</b>Seis reglas: vigila, verifica, publica datos, acompaña, denuncia con pruebas y cuida tu cuenta.</p>
           <div class="reglas">
-            <div class="regla"><span class="n">1</span><div><h3>Vigila las tendencias</h3><p>Revisa diariamente los hashtags de Cuba y Las Tunas; el enemigo fabrica temas. Detectar la mentira temprano es media batalla ganada.</p></div></div>
-            <div class="regla"><span class="n">2</span><div><h3>Verifica antes de compartir</h3><p>Comparar con fuentes oficiales (Granma, Cubadebate, radios territoriales) es parte de la disciplina. Combatir con mentiras propias es regalarle terreno al enemigo.</p></div></div>
-            <div class="regla"><span class="n">3</span><div><h3>Publica con datos, no con gritos</h3><p>Números, nombres, fechas y contexto: el mensaje que cambia de opinión es el que informa, no el que insulta. Cada dato verificable vale más que diez insultos.</p></div></div>
-            <div class="regla"><span class="n">4</span><div><h3>Acompaña, no abandones</h3><p>Comenta y empuja las publicaciones de los medios oficiales y los compañeros de zona: replicar es tan importante como publicar. Nadie combate solo.</p></div></div>
-            <div class="regla"><span class="n">5</span><div><h3>Denuncia, no te rindas</h3><p>Las cuentas falsas, la censura selectiva y el hostigamiento se denuncian a la plataforma y se documentan: captura, fecha y enlace.</p></div></div>
-            <div class="regla"><span class="n">6</span><div><h3>Cuida tu cuenta como tu arma</h3><p>Contraseñas únicas, sin códigos compartidos y sin datos personales expuestos: una cuenta comprometida es un frente perdido.</p></div></div>
+            <div class="regla"><span class="n"><svg class="i"><use href="#i-ojo"/></svg></span><div><h3>Vigila las tendencias</h3><p>Revisa diariamente las etiquetas (hashtags) de Cuba y Las Tunas; el enemigo fabrica temas. Detectar la mentira temprano es media batalla ganada.</p></div></div>
+            <div class="regla"><span class="n"><svg class="i"><use href="#i-escudo"/></svg></span><div><h3>Verifica antes de compartir</h3><p>Comparar con fuentes oficiales (Granma, Cubadebate, radios territoriales) es parte de la disciplina. Combatir con mentiras propias es regalarle terreno al enemigo.</p></div></div>
+            <div class="regla"><span class="n"><svg class="i"><use href="#i-datos"/></svg></span><div><h3>Publica con datos, no con gritos</h3><p>Números, nombres, fechas y contexto: el mensaje que cambia de opinión es el que informa, no el que insulta. Cada dato verificable vale más que diez insultos.</p></div></div>
+            <div class="regla"><span class="n"><svg class="i"><use href="#i-pueblo"/></svg></span><div><h3>Acompaña, no abandones</h3><p>Comenta y empuja las publicaciones de los medios oficiales y los compañeros de zona: replicar es tan importante como publicar. Nadie combate solo.</p></div></div>
+            <div class="regla"><span class="n"><svg class="i"><use href="#i-bandera"/></svg></span><div><h3>Denuncia, no te rindas</h3><p>Las cuentas falsas, la censura selectiva y el hostigamiento se denuncian a la plataforma y se documentan: captura, fecha y enlace.</p></div></div>
+            <div class="regla"><span class="n"><svg class="i"><use href="#i-candado"/></svg></span><div><h3>Cuida tu cuenta como tu arma</h3><p>Contraseñas únicas, sin códigos compartidos y sin datos personales expuestos: una cuenta comprometida es un frente perdido.</p></div></div>
           </div>
           <p class="manual-pie">Disciplina básica: si no tienes el dato confirmado, no publiques el dato. En el frente digital, la prisa es la herramienta del enemigo.</p>
         </div>
@@ -807,11 +1038,13 @@
         <div class="sec-head">
           <div class="kicker">08 / Dudas comunes</div>
           <h2>Algunas respuestas para empezar.</h2>
+          <p class="resumen"><b>En una frase</b>Respuestas rápidas a las dudas más comunes y un glosario con las palabras nuevas.</p>
         </div>
         <div class="faq-list">
           <details><summary>¿Necesito experiencia para empezar?</summary><p>No. Los tres pasos de la pestaña «Primeros pasos» explican todo desde cero: cómo crear la cuenta, cómo llenarla de fuentes veraces y cómo publicar tu primera intervención. La instrucción es parte del deber, no un privilegio.</p></details>
           <details><summary>¿Este espacio me pide contraseñas o datos?</summary><p>No. La ficha de registro solo vive en tu teléfono o computadora: nadie la recibe por internet. Las contraseñas y los códigos de verificación de tu cuenta, jamás: no los des a nadie, ni aunque se presente como compañero.</p></details>
-          <details><summary>¿Puedo usar esto estando en la unidad?</summary><p>Depende de las normas de tu unidad sobre el uso de teléfonos y redes. Consulta siempre con tu jefe y respeta sus indicaciones. Esta guía también sirve para repasarla en tu tiempo personal.</p></details>
+          <details><summary>¿Puedo usar esto estando en la unidad?</summary><p>Depende de las normas de tu unidad sobre el uso de teléfonos y redes. Consulta siempre con tu jefe inmediato y respeta sus indicaciones. Esta guía también sirve para repasarla en tu tiempo personal.</p></details>
+          <details><summary>¿Pueden suspenderme la cuenta por publicar sobre la defensa?</summary><p>Es un riesgo real, y según las reglas de X depende del comportamiento, no del tema. X suspende cuentas que parecen robots o que actúan de forma coordinada: el mismo texto repetido, publicaciones en masa, muchas etiquetas o varias cuentas de una misma persona. Escribe con tus palabras, usa una sola cuenta y publica a ritmo humano. Mira el ejemplo en «Primeros pasos».</p></details>
           <details><summary>¿Quién publica este sitio?</summary><p>La atribución institucional, los logos y los contactos oficiales se integrarán tras su confirmación. Esta página es un prototipo conceptual en preparación.</p></details>
           <details><summary>¿Dónde descargo las aplicaciones?</summary><p>X, Facebook y YouTube desde la tienda oficial de tu teléfono (Google Play o App Store). Verifica el nombre del desarrollador antes de instalar; evita archivos de procedencia desconocida.</p></details>
           <details><summary>¿Y si la señal falla?</summary><p>Datos móviles y ETECSA tienen sus límites: prepara el contenido con antelación, apóyate en los datos oficiales ya descargados y coordina con la unidad de tu zona. La batalla no se gana con un solo intento.</p></details>
@@ -826,10 +1059,12 @@
             <div class="term"><dt>Consejo de Defensa</dt><dd>Órgano que dirige la defensa en su nivel (provincia, municipio o Zona).</dd></div>
             <div class="term"><dt>Zona de Defensa</dt><dd>El sector de barrios y asentamientos más cercano a la gente, con su propio Consejo.</dd></div>
             <div class="term"><dt>Cronología</dt><dd>La lista de publicaciones que ves al abrir X, de las cuentas que sigues.</dd></div>
-            <div class="term"><dt>Hashtag (#)</dt><dd>Palabra con # delante que agrupa las publicaciones de un mismo tema, como #LasTunas.</dd></div>
-            <div class="term"><dt>Repost</dt><dd>Mostrar a tus seguidores la publicación de otra cuenta, sin cambiarla.</dd></div>
+            <div class="term"><dt>Etiqueta (hashtag #)</dt><dd>Palabra con # delante que agrupa las publicaciones de un mismo tema, como #CubaEstaFirme.</dd></div>
+            <div class="term"><dt>Compartir (repost)</dt><dd>Mostrar a tus seguidores la publicación de otra cuenta, sin cambiarla.</dd></div>
             <div class="term"><dt>Réplica</dt><dd>Comentario que escribes debajo de una publicación para aportar un dato o aclarar algo.</dd></div>
             <div class="term"><dt>Cuenta verificada</dt><dd>Cuenta con sello de la plataforma que indica que pertenece a quien dice ser.</dd></div>
+            <div class="term"><dt>Cuenta automática (bot)</dt><dd>Cuenta o programa que publica de forma automática. X vigila este tipo de actividad y puede suspender las cuentas que actúan como una.</dd></div>
+            <div class="term"><dt>Suspensión</dt><dd>Bloqueo de una cuenta por romper las reglas de X. Se puede pedir una revisión desde el aviso de la cuenta.</dd></div>
             <div class="term"><dt>Rumor</dt><dd>Información sin fuente confirmada que se repite hasta parecer cierta.</dd></div>
           </dl>
         </div>
@@ -842,6 +1077,7 @@
         <div class="recorrido-fin-links">
           <a id="seccion-siguiente" href="#guerra-tab">La doctrina <span aria-hidden="true">→</span></a>
           <a id="recorrido-registro" href="#registro-tab" hidden>Inscribirse <span aria-hidden="true">→</span></a>
+          <button type="button" class="imprimir" id="btn-imprimir"><svg class="i" aria-hidden="true"><use href="#i-impresora"/></svg> Imprimir o guardar en PDF</button>
         </div>
       </div>
     </nav>
@@ -917,7 +1153,8 @@
       siguiente.href = '#' + destino[0] + '-tab';
       siguiente.innerHTML = destino[1] + ' <span aria-hidden="true">→</span>';
       enlaceRegistro.hidden = !ultima;
-      etiquetaFin.textContent = ultima ? '¿Qué deseas hacer ahora?' : 'Siguiente sección';
+      etiquetaFin.textContent = 'Sección ' + (indice + 1) + ' de ' + recorrido.length + ' · ' + (ultima ? '¿Qué deseas hacer ahora?' : 'Siguiente');
+      document.querySelector('#progreso-barra').style.width = ((indice + 1) / recorrido.length * 100) + '%';
       volver.hidden = nombre === 'inicio' && !(history.state && history.state.indice > 0);
       volverTexto.textContent = history.state && history.state.indice > 0 ? 'Volver' : 'Ir al inicio';
       fin.hidden = false;
@@ -1026,6 +1263,57 @@
       setTimeout(() => { btnCopiar.innerHTML = btnCopiarHTML; }, 2600);
     });
   
+  </script>
+
+  <script>
+    // PREFERENCIAS DE LECTURA: tamaño de letra y contraste (se recuerdan en este dispositivo)
+    (function () {
+      const raiz = document.documentElement;
+      const guardar = (clave, valor) => { try { localStorage.setItem(clave, valor); } catch (e) {} };
+      const menos = document.querySelector('#btn-menos');
+      const mas = document.querySelector('#btn-mas');
+      const contraste = document.querySelector('#btn-contraste');
+      let tam = Number(raiz.getAttribute('data-tam') || 0);
+      function aplicarTam() {
+        if (tam) raiz.setAttribute('data-tam', tam); else raiz.removeAttribute('data-tam');
+        guardar('xt-tam', tam || '');
+        menos.disabled = tam <= 0;
+        mas.disabled = tam >= 3;
+      }
+      menos.addEventListener('click', () => { tam = Math.max(0, tam - 1); aplicarTam(); });
+      mas.addEventListener('click', () => { tam = Math.min(3, tam + 1); aplicarTam(); });
+      function aplicarContraste(activo) {
+        if (activo) raiz.setAttribute('data-contraste', 'alto'); else raiz.removeAttribute('data-contraste');
+        contraste.setAttribute('aria-pressed', String(activo));
+        guardar('xt-contraste', activo ? '1' : '');
+      }
+      contraste.addEventListener('click', () => aplicarContraste(raiz.getAttribute('data-contraste') !== 'alto'));
+      aplicarTam();
+      contraste.setAttribute('aria-pressed', String(raiz.getAttribute('data-contraste') === 'alto'));
+    })();
+
+    // IMPRIMIR: abre los desplegables para que salga todo el contenido
+    (function () {
+      let cerrados = [];
+      document.querySelector('#btn-imprimir').addEventListener('click', () => window.print());
+      window.addEventListener('beforeprint', () => {
+        cerrados = [...document.querySelectorAll('details:not([open])')];
+        cerrados.forEach(d => d.setAttribute('open', ''));
+      });
+      window.addEventListener('afterprint', () => { cerrados.forEach(d => d.removeAttribute('open')); cerrados = []; });
+    })();
+
+    // ESTRUCTURA: al tocar un nivel se resalta en el esquema
+    (function () {
+      const diagrama = document.querySelector('#diagrama');
+      if (!diagrama) return;
+      diagrama.querySelectorAll('.ver-anillo').forEach(boton => boton.addEventListener('click', () => {
+        diagrama.querySelectorAll('.sel').forEach(e => e.classList.remove('sel'));
+        diagrama.querySelectorAll('.anillo.' + boton.dataset.anillo).forEach(a => a.classList.add('sel'));
+        boton.closest('li').classList.add('sel');
+        if (window.innerWidth <= 960) diagrama.querySelector('.anillos').scrollIntoView({ block: 'center', behavior: 'smooth' });
+      }));
+    })();
   </script>
 </body>
 </html>
