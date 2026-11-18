@@ -354,6 +354,24 @@
       .panel-verde.grande { padding: 28px 20px; }
       .tab-scroll { padding-right: 18px; }
     }
+
+    /* Aviso de suspensiones */
+    .repetido { margin-top: 12px; display: inline-block; background: var(--rojo-suave); color: #8d1f26; border: 1px solid #e6c9c2; border-radius: 8px; padding: 5px 12px; font-size: 14px; font-weight: 700; }
+    .baneo { margin-top: 38px; background: #fff; border: 1px solid var(--line); border-left: 5px solid var(--rojo); border-radius: var(--radius); padding: 28px 28px 24px; box-shadow: var(--sombra); }
+    .baneo > h3 { font-family: Georgia, serif; font-size: 24px; }
+    .baneo-intro { margin-top: 10px; font-size: 17px; color: var(--ink); max-width: 52rem; }
+    .banderas { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 20px; }
+    .bandera { border-radius: 12px; padding: 18px 20px; }
+    .bandera.roja { background: var(--rojo-suave); border: 1px solid #e6c9c2; }
+    .bandera.verde { background: #e4f3e8; border: 1px solid #bcdcc6; }
+    .bandera h4 { font-size: 16.5px; margin-bottom: 8px; }
+    .bandera.roja h4 { color: #8d1f26; }
+    .bandera.verde h4 { color: var(--panel-verde); }
+    .bandera ul { margin-left: 20px; font-size: 16px; }
+    .bandera li { margin-bottom: 7px; }
+    .baneo-pie { margin-top: 20px; padding-top: 16px; border-top: 1px dashed var(--line); font-size: 16px; color: var(--muted); }
+    .baneo-pie strong { color: var(--ink); }
+    @media (max-width: 660px) { .banderas { grid-template-columns: 1fr; } .baneo { padding: 22px 18px; } }
   </style>
 </head>
 <body>
@@ -648,38 +666,71 @@
         </div>
 
         <div class="ejemplo-bloque">
-          <h3>Ejemplo visual: una intervención limpia</h3>
-          <p>Así se ve, en una publicación de X, la diferencia entre aportar y simplemente gritar.</p>
+          <h3>Ejemplo visual: una publicación que suma</h3>
+          <p>Así se ve, en X, la diferencia entre una persona que aporta y una cuenta que parece un robot. Las dos hablan de la defensa; solo una será creíble.</p>
           <div class="comparar">
             <div class="caso bien">
               <span class="etiqueta">✓ Así sí</span>
               <div class="post">
                 <div class="post-cab"><span class="avatar" aria-hidden="true">MR</span><div><b>María R. · Las Tunas</b><span>@maria_tunas</span></div></div>
-                <p class="post-texto">Según el parte oficial de hoy, el servicio se restablece en la tarde. Dejo el enlace al medio original para quien quiera comprobarlo. <span class="hash">#LasTunas</span></p>
-                <div class="post-cita"><b>Medio oficial</b> · Publicación original con el dato y la fecha</div>
+                <p class="post-texto">Entender cómo se organiza la defensa de mi zona me hizo ver que la BPD de mi centro de trabajo también es parte de ella. Lo explica este material oficial, por si a alguien le sirve. <span class="hash">#LasTunas</span></p>
+                <div class="post-cita"><b>Medio oficial</b> · Material sobre la estructura de la defensa territorial</div>
                 <div class="post-pie"><span>Responder</span><span>Repostear</span><span>Guardar</span></div>
               </div>
               <ul>
-                <li>Cita la fuente oficial y deja el enlace.</li>
-                <li>Da un dato concreto, sin adjetivos de más.</li>
-                <li>Nombre real y reconocible.</li>
+                <li>Escrito con sus propias palabras.</li>
+                <li>Enlaza una fuente oficial que se puede comprobar.</li>
+                <li>Un solo hashtag, relacionado con el tema.</li>
+                <li>Nombre real y ritmo humano: una publicación a la vez.</li>
               </ul>
             </div>
             <div class="caso mal">
               <span class="etiqueta">✗ Así no</span>
               <div class="post">
                 <div class="post-cab"><span class="avatar" aria-hidden="true">?</span><div><b>usuario8841</b><span>@usuario8841</span></div></div>
-                <p class="post-texto">¡¡Todo lo que dicen es MENTIRA!! Son unos vendidos y quien no lo vea es tonto!!! <span class="hash">#TodosAPublicar</span></p>
+                <p class="post-texto">¡¡VIVA LA DEFENSA!! Los que dudan son unos traidores!!! <span class="hash">#LasTunas #Cuba #MTT #BPD #Patria #Defensa #Granma #Revolución</span> @cuenta1 @cuenta2 @cuenta3</p>
+                <div class="repetido">⚠ Mismo texto publicado 40 veces en una hora</div>
                 <div class="post-pie"><span>Responder</span><span>Repostear</span><span>Guardar</span></div>
               </div>
               <ul>
-                <li>No tiene fuente ni dato verificable.</li>
-                <li>Insulta: no convence a nadie.</li>
-                <li>Cuenta anónima, sin credibilidad.</li>
+                <li>Texto copiado y repetido en masa.</li>
+                <li>Muchos hashtags y menciones para «llenar».</li>
+                <li>Insulta, no da ningún dato ni fuente.</li>
+                <li>Cuenta anónima y a un ritmo imposible para una persona.</li>
               </ul>
             </div>
           </div>
           <p class="ficticio">Ejemplo ilustrativo con cuentas y texto inventados; no representa a ninguna persona real.</p>
+
+          <div class="baneo" role="note">
+            <h3>¿Por qué X puede suspender una cuenta?</h3>
+            <p class="baneo-intro"><strong>Hablar de política o de la defensa no es motivo de suspensión.</strong> Lo que X vigila es el <em>comportamiento</em>: sus reglas de «manipulación de plataforma y spam» buscan cuentas que parezcan automáticas (bots) o actividad coordinada para inflar un tema. Una cuenta real puede caer por actuar como si fuera un bot.</p>
+            <div class="banderas">
+              <div class="bandera roja">
+                <h4>Lo que activa las alarmas</h4>
+                <ul>
+                  <li>Publicar o responder <strong>el mismo texto</strong> muchas veces, o que muchas cuentas publiquen el mismo mensaje.</li>
+                  <li>Seguir, repostear o dar «me gusta» <strong>a gran velocidad</strong> o en masa.</li>
+                  <li>Llenar las publicaciones de hashtags o menciones que no vienen al caso.</li>
+                  <li>Usar programas o apps para publicar automáticamente.</li>
+                  <li>Manejar varias cuentas para aparentar más apoyo.</li>
+                  <li>Insultar, acosar o hacerse pasar por otra persona.</li>
+                </ul>
+              </div>
+              <div class="bandera verde">
+                <h4>Lo que te protege</h4>
+                <ul>
+                  <li>Escribir <strong>con tus palabras</strong>, aunque el dato venga de un medio oficial.</li>
+                  <li>Una sola cuenta, con tu nombre real.</li>
+                  <li>Un ritmo de persona: pocas publicaciones al día, no cientos en minutos.</li>
+                  <li>Compartir con moderación y aportar algo en cada comentario.</li>
+                  <li>No copiar y pegar mensajes que te manden «para publicar».</li>
+                </ul>
+              </div>
+            </div>
+            <p class="baneo-pie"><strong>Si te suspenden:</strong> X puede equivocarse, porque sus sistemas son automáticos. Pide la revisión desde el aviso de la propia cuenta y no abras otra para saltarte la suspensión: eso también rompe las reglas y empeora el caso. Las reglas cambian, así que revisa de vez en cuando las Reglas de X en su Centro de ayuda.</p>
+          </div>
+        </div>
         </div>
       </div>
     </section>
@@ -812,6 +863,7 @@
           <details><summary>¿Necesito experiencia para empezar?</summary><p>No. Los tres pasos de la pestaña «Primeros pasos» explican todo desde cero: cómo crear la cuenta, cómo llenarla de fuentes veraces y cómo publicar tu primera intervención. La instrucción es parte del deber, no un privilegio.</p></details>
           <details><summary>¿Este espacio me pide contraseñas o datos?</summary><p>No. La ficha de registro solo vive en tu teléfono o computadora: nadie la recibe por internet. Las contraseñas y los códigos de verificación de tu cuenta, jamás: no los des a nadie, ni aunque se presente como compañero.</p></details>
           <details><summary>¿Puedo usar esto estando en la unidad?</summary><p>Depende de las normas de tu unidad sobre el uso de teléfonos y redes. Consulta siempre con tu jefe y respeta sus indicaciones. Esta guía también sirve para repasarla en tu tiempo personal.</p></details>
+          <details><summary>¿Pueden suspenderme la cuenta por publicar sobre la defensa?</summary><p>No por el tema, sino por el comportamiento. X suspende cuentas que parecen robots o que actúan de forma coordinada: el mismo texto repetido, publicaciones en masa, muchos hashtags o varias cuentas de una misma persona. Escribe con tus palabras, usa una sola cuenta y publica a ritmo humano. Mira el ejemplo en «Primeros pasos».</p></details>
           <details><summary>¿Quién publica este sitio?</summary><p>La atribución institucional, los logos y los contactos oficiales se integrarán tras su confirmación. Esta página es un prototipo conceptual en preparación.</p></details>
           <details><summary>¿Dónde descargo las aplicaciones?</summary><p>X, Facebook y YouTube desde la tienda oficial de tu teléfono (Google Play o App Store). Verifica el nombre del desarrollador antes de instalar; evita archivos de procedencia desconocida.</p></details>
           <details><summary>¿Y si la señal falla?</summary><p>Datos móviles y ETECSA tienen sus límites: prepara el contenido con antelación, apóyate en los datos oficiales ya descargados y coordina con la unidad de tu zona. La batalla no se gana con un solo intento.</p></details>
@@ -830,6 +882,8 @@
             <div class="term"><dt>Repost</dt><dd>Mostrar a tus seguidores la publicación de otra cuenta, sin cambiarla.</dd></div>
             <div class="term"><dt>Réplica</dt><dd>Comentario que escribes debajo de una publicación para aportar un dato o aclarar algo.</dd></div>
             <div class="term"><dt>Cuenta verificada</dt><dd>Cuenta con sello de la plataforma que indica que pertenece a quien dice ser.</dd></div>
+            <div class="term"><dt>Bot</dt><dd>Cuenta o programa que publica de forma automática. X lo vigila y suele suspender las cuentas que actúan como uno.</dd></div>
+            <div class="term"><dt>Suspensión</dt><dd>Bloqueo de una cuenta por romper las reglas de X. Se puede pedir una revisión desde el aviso de la cuenta.</dd></div>
             <div class="term"><dt>Rumor</dt><dd>Información sin fuente confirmada que se repite hasta parecer cierta.</dd></div>
           </dl>
         </div>
